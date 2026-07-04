@@ -1,74 +1,75 @@
-import { Users, Briefcase, UserCheck, Building2, Map, Heart } from "lucide-react";
+import { UsersRound, FolderOpen, Landmark, Map, HeartHandshake } from "lucide-react";
 
 export default function Impacts() {
   const stats = [
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <UsersRound className="w-6 h-6" strokeWidth={1.5} />,
       number: "2000+",
-      label: "Workers Deployed",
-      highlight: true,
+      label: <>Workers<br />Deployed</>,
     },
     {
-      icon: <Briefcase className="w-8 h-8" />,
+      icon: <FolderOpen className="w-6 h-6" strokeWidth={1.5} />,
       number: "10+",
-      label: "Industry Served",
-      highlight: false,
+      label: <>Industry<br />Served</>,
     },
     {
-      icon: <UserCheck className="w-8 h-8" />,
+      icon: <UsersRound className="w-6 h-6" strokeWidth={1.5} />,
       number: "500+",
-      label: "Active Workforce",
-      highlight: false,
+      label: <>Active<br />Workforce</>,
     },
     {
-      icon: <Building2 className="w-8 h-8" />,
+      icon: <Landmark className="w-6 h-6" strokeWidth={1.5} />,
       number: "100+",
-      label: "Company Partnered",
-      highlight: false,
+      label: <>Company<br />Partnered</>,
     },
     {
-      icon: <Map className="w-8 h-8" />,
+      icon: <Map className="w-6 h-6" strokeWidth={1.5} />,
       number: "5+",
-      label: "States Served",
-      highlight: false,
+      label: <>States<br />Served</>,
     },
     {
-      icon: <Heart className="w-8 h-8" />,
+      icon: <HeartHandshake className="w-6 h-6" strokeWidth={1.5} />,
       number: "99%",
-      label: "Deployment Success rate",
-      highlight: false,
+      label: <>Deployment<br />Success rate</>,
     },
   ];
 
   return (
-    <section className="w-full px-6 py-20 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center lg:items-start gap-12">
+    <section className="mx-8 rounded-4xl px-6 py-20 md:px-12 lg:px-24 bg-white flex flex-col lg:flex-row items-center lg:items-start gap-12">
       {/* Left Content */}
       <div className="w-full lg:w-1/3 pt-8">
         <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Impacts</h3>
         <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Numbers.</h2>
-        <p className="text-gray-600 text-sm max-w-xs leading-relaxed">
+        <p className="text-gray-600 text-sm max-w-xs leading-relaxed mb-2">
           our impact in creating meaningful opportunities and driving sustainable change
-        </p>
+        </p> {/* Divider Line */}
+        <div className="w-8 h-[2px] mb-2 transition-all duration-300 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] group-hover:from-white/60 group-hover:to-white/60"></div>
+
       </div>
 
       {/* Right Content / Grid */}
-      <div className="w-full lg:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
         {stats.map((stat, index) => (
           <div
             key={index}
-            className={`flex flex-col items-center justify-center p-8 rounded-3xl shadow-custom transition-transform hover:-translate-y-1 ${stat.highlight
-                ? 'bg-primary-1 text-white'
-                : 'bg-white text-black'
-              }`}
+            className="group flex flex-col items-center justify-center p-4 lg:p-8 rounded-4xl border transition-all duration-300 hover:-translate-y-1 bg-white hover:bg-primary-1 text-black hover:text-white border-gray-100 hover:border-primary-1 shadow-sm hover:shadow-xl hover:shadow-primary-1/20"
           >
-            <div className={`mb-4 ${stat.highlight ? 'text-primary-2' : 'text-primary-1'}`}>
+            {/* Icon Circle */}
+            <div className="w-14 h-14 rounded-full flex items-center justify-center transition-colors duration-300 bg-background text-primary-1 group-hover:bg-white/10 group-hover:text-white">
               {stat.icon}
             </div>
-            <div className="text-3xl font-bold mb-2">{stat.number}</div>
-            <div className={`text-xs text-center ${stat.highlight ? 'text-white/80' : 'text-gray-500'}`}>
-              {stat.label.split(' ').map((word, i) => (
-                <span key={i}>{word}<br /></span>
-              ))}
+
+            {/* Number */}
+            <div className="text-[28px] lg:text-[32px] font-bold tracking-tight ">
+              {stat.number}
+            </div>
+
+            {/* Divider Line */}
+            <div className="w-8 h-[2px] mb-2 transition-all duration-300 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] group-hover:from-white/60 group-hover:to-white/60"></div>
+
+            {/* Label */}
+            <div className="text-[11px] lg:text-xs text-center font-medium leading-[1.6] transition-colors duration-300 text-gray-500 group-hover:text-white/90">
+              {stat.label}
             </div>
           </div>
         ))}
