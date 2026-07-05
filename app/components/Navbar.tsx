@@ -9,7 +9,14 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-between px-4 py-3 md:px-12 lg:px-24 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <nav className="w-full flex items-center justify-between px-4 py-3 md:px-12 lg:px-24 sticky top-0 z-50 border-b border-white/40">
+      {/* Glassmorphism Background with Noise */}
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-xl -z-10 shadow-xs"></div>
+      <div 
+        className="absolute inset-0 opacity-[0.04] mix-blend-overlay -z-10 pointer-events-none" 
+        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")" }}
+      ></div>
+
       <div className="flex items-center">
         <Link href="/">
           <Image 

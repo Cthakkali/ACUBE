@@ -31,7 +31,7 @@ export default function Clients() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLElement>(null);
 
-  // Creating an array of 8 dummy clients to represent the 4x2 grid of "ANTRIX" logos in mockup
+  // Creating an array of 8 sample clients to represent the 4x2 grid of "ANTRIX" logos in mockup
   const clients = Array(8).fill("ANTRIX");
 
   // GSAP Animations
