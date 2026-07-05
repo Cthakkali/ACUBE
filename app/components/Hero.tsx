@@ -23,12 +23,13 @@ export default function Hero() {
       ease: "power3.out",
     });
 
-    // Right collage scales/fades in
-    tl.from(".hero-right", {
-      scale: 0.95,
-      x: 50,
+    // Right collage images scale/fade in individually with stagger
+    tl.from(".hero-image", {
+      scale: 0.9,
+      x: 30,
       opacity: 0,
-      duration: 1,
+      duration: 0.8,
+      stagger: 0.15,
       ease: "power3.out",
     }, "-=0.6");
 
@@ -84,11 +85,11 @@ export default function Hero() {
         <div className="flex gap-4 sm:gap-6 items-stretch w-full max-w-[774px]">
           {/* Left Large Image */}
           <div
-            className="overflow-hidden relative shadow-xl -skew-x-10"
+            className="hero-image overflow-hidden relative shadow-xl -skew-x-10"
             style={{ flex: 44, borderRadius: '1.5rem', aspectRatio: '2/3' }}
           >
             <div
-              className="absolute top-0 -left-[15%] w-[130%] h-full skew-x-10"
+              className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
               style={{
                 backgroundImage: 'url(/hero.png)',
                 backgroundSize: 'cover',
@@ -101,11 +102,11 @@ export default function Hero() {
           <div className="flex flex-col gap-4 sm:gap-6 -skew-x-10" style={{ flex: 31 }}>
             {/* Top Right */}
             <div
-              className="flex-1 overflow-hidden shadow-lg relative"
+              className="hero-image flex-1 overflow-hidden shadow-lg relative"
               style={{ borderRadius: '1.5rem' }}
             >
               <div
-                className="absolute top-0 -left-[15%] w-[130%] h-full skew-x-10"
+                className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
                 style={{
                   backgroundImage: 'url(/hero-2.png)',
                   backgroundSize: 'cover',
@@ -115,11 +116,11 @@ export default function Hero() {
             </div>
             {/* Middle Right */}
             <div
-              className="flex-1 overflow-hidden shadow-lg relative"
+              className="hero-image flex-1 overflow-hidden shadow-lg relative"
               style={{ borderRadius: '1.5rem' }}
             >
               <div
-                className="absolute top-0 -left-[15%] w-[130%] h-full skew-x-10"
+                className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
                 style={{
                   backgroundImage: 'url(/hero-1.png)',
                   backgroundSize: 'cover',
@@ -129,11 +130,11 @@ export default function Hero() {
             </div>
             {/* Bottom Right */}
             <div
-              className="flex-1 overflow-hidden shadow-lg relative"
+              className="hero-image flex-1 overflow-hidden shadow-lg relative"
               style={{ borderRadius: '1.5rem' }}
             >
               <div
-                className="absolute top-0 -left-[15%] w-[130%] h-full skew-x-10"
+                className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
                 style={{
                   backgroundImage: 'url(/hero-4.png)',
                   backgroundSize: 'cover',
