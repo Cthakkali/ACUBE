@@ -4,12 +4,13 @@
   --color-background: #F0F7F6;
   --color-foreground: #333333;
   --font-sans: var(--font-dm-sans), Arial, Helvetica, sans-serif;
-  
+
   --color-primary-1: #24837D;
   --color-primary-2: #70E0DD;
   --color-primary-dark: #24837D;
+
+  --color-tertiary: #F89C03;
   --color-black: #333333;
-  
   --shadow-custom: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -27,4 +28,8 @@ body {
 
 .bg-primary-gradient {
   background: linear-gradient(90deg, #2D9F90 0%, #A0DAAD 100%);
+}
+
+.bg-cta-gradient {
+  background: linear-gradient(90deg, #2D9F90 0%, #2D9F90 60%, #6cc680 100%);
 }
