@@ -81,7 +81,7 @@ export default function Footer() {
       {/* Main Footer Links */}
       <section className="w-full bg-[#00403C] text-white px-4 py-10 md:px-12 lg:px-24 flex flex-col md:flex-row flex-wrap gap-8 lg:gap-0 justify-between border-b border-white/10">
         {/* Brand */}
-        <div className="w-full lg:w-2/5 flex flex-col max-w-sm">
+        <div className="w-full lg:w-2/5 flex flex-col items-start justify-center max-w-sm">
           <Image src="/logo-footer.svg" alt="A-Cube Logo White" width={220} height={60} className="mb-4 w-auto h-14" />
           <p className="text-[11px] text-white leading-relaxed pr-8">
             A-Cube Institute of Skills is a leading human resource supply and skill

@@ -102,8 +102,7 @@ export default function Hero() {
           <div className="flex flex-col gap-4 sm:gap-6 -skew-x-10" style={{ flex: 31 }}>
             {/* Top Right */}
             <div
-              className="hero-image flex-1 overflow-hidden shadow-lg relative"
-              style={{ borderRadius: '1.5rem' }}
+              className="hero-image flex-1 overflow-hidden shadow-lg relative rounded-lg sm:rounded-xl lg:rounded-3xl"
             >
               <div
                 className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
@@ -116,8 +115,7 @@ export default function Hero() {
             </div>
             {/* Middle Right */}
             <div
-              className="hero-image flex-1 overflow-hidden shadow-lg relative"
-              style={{ borderRadius: '1.5rem' }}
+              className="hero-image flex-1 overflow-hidden shadow-lg relative rounded-lg sm:rounded-xl lg:rounded-3xl"
             >
               <div
                 className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
@@ -130,8 +128,7 @@ export default function Hero() {
             </div>
             {/* Bottom Right */}
             <div
-              className="hero-image flex-1 overflow-hidden shadow-lg relative"
-              style={{ borderRadius: '1.5rem' }}
+              className="hero-image flex-1 overflow-hidden shadow-lg relative rounded-lg sm:rounded-xl lg:rounded-3xl"
             >
               <div
                 className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"

@@ -97,12 +97,14 @@ export default function Impacts() {
               </div>
 
               {/* Number */}
-              <div className="text-[28px] lg:text-[32px] font-bold text-primary-1 tracking-tight ">
+              <div className="text-[28px] lg:text-[32px] font-bold text-primary-1 group-hover:text-white tracking-tight transition-colors duration-300">
                 {stat.number}
               </div>
 
               {/* Divider Line */}
-              <div className="w-8 h-[2px] mb-2 transition-all duration-300 bg-primary-gradient group-hover:bg-none! group-hover:bg-white/60"></div>
+              <div className="w-10 h-1 mb-3 rounded-full relative overflow-hidden bg-primary-gradient shrink-0">
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
 
               {/* Label */}
               <div className="text-[11px] lg:text-xs text-center font-medium leading-[1.6] transition-colors duration-300 text-black group-hover:text-white/90">
