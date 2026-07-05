@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="w-full flex flex-col">
       {/* CTA & Contact Section */}
-      <section className="relative w-full bg-cta-gradient text-white px-6 py-15 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-12 lg:gap-24 overflow-hidden">
+      <section className="relative w-full bg-cta-gradient text-white px-4 py-12 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-8 lg:gap-24 overflow-hidden">
 
         {/* Background Image overlay */}
         <div className="absolute right-0 bottom-0 w-full h-48 lg:w-1/2  z-0 opacity-25 mix-blend-overlay bg-no-repeat bg-right bg-cover lg:bg-contain  pointer-events-none" style={{ backgroundImage: 'url("/cta image.png")' }}></div>
@@ -79,7 +79,7 @@ export default function Footer() {
       </section>
 
       {/* Main Footer Links */}
-      <section className="w-full bg-[#00403C] text-white px-6 py-12 md:px-12 lg:px-24 flex flex-col md:flex-row flex-wrap gap-12 lg:gap-0 justify-between border-b border-white/10">
+      <section className="w-full bg-[#00403C] text-white px-4 py-10 md:px-12 lg:px-24 flex flex-col md:flex-row flex-wrap gap-8 lg:gap-0 justify-between border-b border-white/10">
         {/* Brand */}
         <div className="w-full lg:w-2/5 flex flex-col max-w-sm">
           <Image src="/logo-footer.svg" alt="A-Cube Logo White" width={220} height={60} className="mb-4 w-auto h-14" />
@@ -137,7 +137,7 @@ export default function Footer() {
       </section>
 
       {/* Bottom Bar */}
-      <div className="w-full bg-[#003431] flex flex-col md:flex-row justify-between items-center px-6 md:px-12 lg:px-24 py-4 text-xs text-white/60 gap-4">
+      <div className="w-full bg-[#003431] flex flex-col md:flex-row justify-between items-center px-4 md:px-12 lg:px-24 py-4 text-xs text-white/60 gap-4 text-center md:text-left">
         <div>
           &copy; 2026 A-Cube Institute of Skills | Developed by <span className="font-medium"><a href="https://jadbery.com" className="text-white hover:underline">Jadbery Digital</a></span>
         </div>

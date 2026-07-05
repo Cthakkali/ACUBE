@@ -43,7 +43,7 @@ export default function Hero() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full px-6 md:px-12 lg:px-24 pt-8 lg:pt-12 pb-32 lg:pb-32 flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
+    <section ref={containerRef} className="relative w-full px-4 md:px-12 lg:px-24 pt-8 lg:pt-12 pb-12 lg:pb-32 flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
 
       {/* Left Content */}
       <div className="w-full lg:w-5/12 flex flex-col items-start z-10 hero-left">
@@ -66,7 +66,7 @@ export default function Hero() {
           A-Cube Institute of Skills helps businesses build dependable teams through skilled, unskilled, contract, and permanent manpower solutions. We connect organizations with qualified professionals who are ready to contribute from day one, ensuring operational continuity and business growth.
         </p>
 
-        <div className="flex flex-wrap items-center gap-4 mb-20">
+        <div className="flex flex-wrap items-center gap-4 mb-10 lg:mb-20">
           <button className="relative overflow-hidden bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] text-white font-bold text-sm px-5 rounded-md flex items-center gap-2 group h-[44px]">
             <span className="absolute inset-0 bg-linear-to-r from-[#A0DAAD] to-[#2D9F90] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             <span className="relative z-10 flex items-center gap-2">Explore Services <ArrowRight className="w-5 h-5" /></span>
@@ -81,8 +81,8 @@ export default function Hero() {
       </div>
 
       {/* Right Content / Image Collage */}
-      <div className="w-full lg:w-8/12 relative flex justify-center z-10 pb-20 lg:pb-0 hero-right">
-        <div className="flex gap-4 sm:gap-6 items-stretch w-full max-w-[774px]">
+      <div className="w-full lg:w-8/12 relative flex justify-center z-10 hero-right">
+        <div className="flex gap-3 sm:gap-6 items-stretch w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[774px]">
           {/* Left Large Image */}
           <div
             className="hero-image overflow-hidden relative shadow-xl -skew-x-10"
@@ -147,7 +147,7 @@ export default function Hero() {
       </div>
 
       {/* Stats Strip */}
-      <div className="absolute bottom-40 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 border border-gray-50 grid grid-cols-2 md:grid-cols-4 gap-6 z-99 hero-stats">
+      <div className="relative lg:absolute mt-8 lg:mt-0 lg:bottom-40 w-full lg:w-auto bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 border border-gray-50 grid grid-cols-2 md:grid-cols-4 gap-6 z-99 hero-stats">
         <div className="flex items-center gap-2 border-r border-gray-100 last:border-0 pr-2">
           <UsersRound className="w-8 h-8 text-primary-1" strokeWidth={1.5} />
           <div>

@@ -71,11 +71,11 @@ export default function Clients() {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full px-6 py-20 md:px-12 lg:px-24 flex flex-col gap-12">
+    <section ref={containerRef} className="w-full px-4 py-12 md:px-12 lg:px-24 flex flex-col gap-12">
       {/* Top Section - Logos and Title */}
       <div className="flex flex-col md:flex-row gap-8 lg:gap-12 w-full">
         {/* Logos Grid */}
-        <div className="logos-grid w-full md:w-2/3 bg-white rounded-3xl p-8 lg:p-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="logos-grid w-full md:w-2/3 bg-white rounded-3xl p-6 md:p-8 lg:p-12 grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-8">
           {clients.map((client, idx) => (
             <div key={idx} className="client-logo flex items-center justify-center">
               <div className="w-28 h-12 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
@@ -95,7 +95,7 @@ export default function Clients() {
         </div>
 
         {/* Title Box */}
-        <div className="title-box w-full md:w-1/3 bg-white rounded-3xl p-24 flex flex-col justify-center">
+        <div className="title-box w-full md:w-1/3 bg-white rounded-3xl p-10 lg:p-24 flex flex-col justify-center">
           <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase">Our Proud</h3>
           <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Clients.</h2>
           <p className="text-gray-600 text-xs leading-relaxed max-w-xs">
@@ -108,9 +108,9 @@ export default function Clients() {
       <div className="w-full bg-[#24837D]/5 rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row relative overflow-hidden">
 
         {/* Background Shapes */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 md:w-1/3 pointer-events-none overflow-hidden rounded-r-3xl">
-          <div className="absolute -right-32 -top-32 w-[500px] h-[500px] rounded-full bg-primary-1/5"></div>
-          <div className="absolute -right-32 -top-32 w-[400px] h-[400px] rounded-full bg-primary-1/8"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 md:w-1/3 pointer-events-none overflow-hidden rounded-r-3xl hidden lg:block">
+          <div className="absolute -right-32 -top-32 w-[500px] h-[500px] rounded-full bg-primary-1/5 "></div>
+          <div className="absolute -right-32 -top-32 w-[400px] h-[400px] rounded-full bg-primary-1/8 "></div>
         </div>
 
         {/* Left Column */}
@@ -126,7 +126,7 @@ export default function Clients() {
         </div>
 
         {/* Right Column */}
-        <div className="w-full md:w-2/4 md:pl-12 flex flex-col justify-center relative z-10 min-h-[160px]">
+        <div className="w-full md:w-3/4 md:pl-12 flex flex-col justify-center relative z-10 min-h-[160px]">
           <div className="flex gap-2.5 mb-6">
             {testimonials.map((_, idx) => (
               <button
@@ -154,7 +154,7 @@ export default function Clients() {
         </div>
 
         {/* Large Quote Icon Background */}
-        <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-[#BCE1D8] rounded-full flex items-center justify-center pointer-events-none z-10">
+        <div className="absolute right-4 top-1/5 md:right-16 md:top-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-[#BCE1D8] rounded-full flex items-center justify-center pointer-events-none z-10">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="#2D9F90" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
           </svg>

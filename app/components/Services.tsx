@@ -120,12 +120,12 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full relative px-6 py-20 md:px-12 lg:px-24 bg-white services-section">
+    <section className="w-full relative px-4 py-12 md:px-12 lg:px-24 bg-white services-section">
       <div className="w-full flex flex-col lg:flex-row relative">
         
         {/* Sticky Left Panel */}
         <div className="w-full lg:w-3/12 shrink-0 relative mb-12 lg:mb-0 services-left">
-          <div className="lg:sticky lg:top-24 bg-primary-1 text-white p-10 lg:p-14 rounded-[2.5rem] flex flex-col justify-center min-h-[420px] lg:min-h-[550px] z-10 shadow-2xl shadow-primary-1/40">
+          <div className="lg:sticky lg:top-24 bg-primary-1 text-white p-8 lg:p-14 rounded-[2.5rem] flex flex-col justify-center min-h-[350px] lg:min-h-[550px] z-10 shadow-2xl shadow-primary-1/40">
             <h3 className="text-sm font-semibold tracking-wide mb-8">Our Services</h3>
             <div>
               <h2 className="text-3xl font-bold mb-6">
@@ -146,7 +146,7 @@ export default function Services() {
               
               {/* Pagination Number */}
               <div className="text-primary-1 text-[4rem] font-medium leading-none mb-16 lg:translate-x-12 transition-all duration-300">
-                {activeIndex + 1}<span className="text-gray-200 text-5xl">/4</span>
+                {activeIndex + 1}<span className="text-gray-200 text-2xl">/4</span>
               </div>
 
               {/* Vertical Navigation Dots */}
@@ -168,7 +168,7 @@ export default function Services() {
           </div>
 
           {/* Scrolling Service Items */}
-          <div className="flex flex-col gap-32 lg:gap-48 pb-10">
+          <div className="flex flex-col gap-24 lg:gap-48 pb-10">
             {dummyServices.map((svc, i) => (
               <div 
                 key={i}
@@ -192,7 +192,7 @@ export default function Services() {
                   
                   {/* Mobile Pagination Number */}
                   <div className="text-primary-1 text-4xl font-medium leading-none lg:hidden">
-                    {i + 1}<span className="text-gray-200 text-base">/3</span>
+                    {i + 1}<span className="text-gray-200 text-sm">/4</span>
                   </div>
                 </div>
 
@@ -205,7 +205,7 @@ export default function Services() {
                 <div className="w-[80%] max-w-2xl h-px bg-gray-200 mb-12 ml-4"></div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-8 max-w-3xl pr-0 lg:pr-24 ml-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-y-10 gap-x-8 max-w-3xl pr-0 lg:pr-24 ml-4">
                   {svc.items.map((item, idx) => (
                     <div key={idx} className="flex items-center gap-5">
                       <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-primary-1 shrink-0">
