@@ -1,15 +1,46 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Quote } from "lucide-react";
 
+const testimonials = [
+  {
+    text: "Acube has transformed the way we handle our digital presence. Their expertise and dedication are unmatched. Truly a game-changer for our business.",
+    author: "Partner Leadership Team"
+  },
+  {
+    text: "The level of professionalism and the quality of work delivered by the team exceeded all our expectations. We highly recommend their services.",
+    author: "Marketing Director, TechCorp"
+  },
+  {
+    text: "Working with them was a seamless experience. They understood our vision perfectly and executed it with flawless precision.",
+    author: "CEO, Innovate Solutions"
+  },
+  {
+    text: "An absolute pleasure to collaborate with. They brought fresh ideas to the table and delivered outstanding results within the timeline.",
+    author: "Head of Product, GlobalTech"
+  }
+];
+
 export default function Clients() {
+  const [activeIndex, setActiveIndex] = useState(0);
   // Creating an array of 8 dummy clients to represent the 4x2 grid of "ANTRIX" logos in mockup
   const clients = Array(8).fill("ANTRIX");
+
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="w-full px-6 py-20 md:px-12 lg:px-24 flex flex-col gap-12">
       {/* Top Section - Logos and Title */}
       <div className="flex flex-col md:flex-row gap-8 lg:gap-12 w-full">
         {/* Logos Grid */}
-        <div className="w-full md:w-2/3 bg-white rounded-3xl p-8 lg:p-12 shadow-custom grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="w-full md:w-2/3 bg-white rounded-3xl p-8 lg:p-12  grid grid-cols-2 sm:grid-cols-4 gap-8">
           {clients.map((client, idx) => (
             <div key={idx} className="flex items-center justify-center">
               <div className="text-primary-1 font-bold text-2xl tracking-tighter italic border-b-4 border-blue-800 flex items-center relative">
@@ -22,7 +53,7 @@ export default function Clients() {
         </div>
 
         {/* Title Box */}
-        <div className="w-full md:w-1/3 bg-white rounded-3xl p-8 lg:p-12 shadow-custom flex flex-col justify-center">
+        <div className="w-full md:w-1/3 bg-white rounded-3xl p-8 lg:p-12  flex flex-col justify-center">
           <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-4">Our Proud</h3>
           <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Clients.</h2>
           <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
@@ -32,37 +63,59 @@ export default function Clients() {
       </div>
 
       {/* Bottom Section - Testimonial */}
-      <div className="w-full bg-[#EAF6F5] rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row items-center relative overflow-hidden shadow-custom">
-        <div className="w-full md:w-1/3 mb-8 md:mb-0">
-          <div className="bg-[#D1EBE9] text-primary-1 text-xs font-bold px-3 py-1 rounded mb-4 inline-block tracking-wider">
-            TRUSTED BY PARTNERS
-          </div>
-          <h2 className="text-3xl font-bold text-black leading-tight">
-            What Our <br /><span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">Partners Say</span>
-          </h2>
+      <div className="w-full bg-[#24837D]/5 rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row relative overflow-hidden">
+
+        {/* Background Shapes */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 md:w-1/3 pointer-events-none overflow-hidden rounded-r-3xl">
+          <div className="absolute -right-32 -top-32 w-[500px] h-[500px] rounded-full bg-primary-1/5"></div>
+          <div className="absolute -right-32 -top-32 w-[400px] h-[400px] rounded-full bg-primary-1/8"></div>
         </div>
 
-        <div className="w-full md:w-2/3 md:pl-12 flex flex-col justify-center">
-          <div className="flex gap-2 mb-6">
-            <div className="w-3 h-3 rounded-full bg-primary-1"></div>
-            <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-            <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-            <div className="w-3 h-3 rounded-full bg-gray-300"></div>
+        {/* Left Column */}
+        <div className="w-full md:w-1/4 mb-8 md:mb-0 relative z-10 flex flex-col justify-center md:border-r border-[#CDE3DE] md:pr-8">
+          <div className="bg-[#E0F0EE] text-[#2D9F90] text-[10px] font-bold px-3 py-1.5 rounded-md inline-block tracking-wider w-max">
+            TRUSTED BY PARTNERS
+          </div>
+          <h2 className="text-3xl font-bold text-[#333333] leading-tight mb-4">
+            What Our <br />
+            <span className="bg-linear-to-r from-[#5BB79F] to-[#92D1AA] bg-clip-text text-transparent">Partners Say</span>
+          </h2>
+          <div className="w-12 h-[2px] bg-[#92D1AA]"></div>
+        </div>
+
+        {/* Right Column */}
+        <div className="w-full md:w-2/4 md:pl-12 flex flex-col justify-center relative z-10 min-h-[160px]">
+          <div className="flex gap-2.5 mb-6">
+            {testimonials.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveIndex(idx)}
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${idx === activeIndex ? "bg-[#2D9F90]" : "bg-[#D9D9D9] hover:bg-[#B0B0B0]"
+                  }`}
+                aria-label={`Go to testimonial ${idx + 1}`}
+              />
+            ))}
           </div>
 
-          <p className="text-black font-medium text-lg leading-relaxed max-w-2xl mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <div className="transition-opacity duration-500">
+            <p className="text-black font-normal text-sm leading-relaxed max-w-2xl mb-2">
+              "{testimonials[activeIndex].text}"
+            </p>
 
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-0.5 bg-primary-1"></div>
-            <span className="text-primary-1 font-bold text-sm">Partner Leadership Team</span>
+            <div className="flex items-center gap-4">
+              <div className="w-6 h-px bg-[#B0B0B0]"></div>
+              <span className="text-[#2D9F90] font-bold text-sm">
+                {testimonials[activeIndex].author}
+              </span>
+            </div>
           </div>
         </div>
 
         {/* Large Quote Icon Background */}
-        <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 w-32 h-32 md:w-40 md:h-40 bg-primary-2/20 rounded-full flex items-center justify-center pointer-events-none">
-          <Quote className="w-16 h-16 text-primary-1 rotate-180 opacity-50" />
+        <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-[#BCE1D8] rounded-full flex items-center justify-center pointer-events-none z-10">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="#2D9F90" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
+          </svg>
         </div>
       </div>
     </section>

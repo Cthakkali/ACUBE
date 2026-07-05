@@ -95,7 +95,7 @@ export default function Services() {
       <div className="w-full flex flex-col lg:flex-row relative">
         
         {/* Sticky Left Panel */}
-        <div className="w-full lg:w-[32%] shrink-0 relative mb-12 lg:mb-0">
+        <div className="w-full lg:w-3/12 shrink-0 relative mb-12 lg:mb-0">
           <div className="lg:sticky lg:top-24 bg-primary-1 text-white p-10 lg:p-14 rounded-[2.5rem] flex flex-col justify-center min-h-[500px] lg:min-h-[640px] z-10 shadow-2xl shadow-primary-1/40">
             <h3 className="text-sm font-semibold tracking-wide mb-12">Our Services</h3>
             <div>
@@ -109,7 +109,7 @@ export default function Services() {
         </div>
 
         {/* Right Content - Scrollable */}
-        <div className="w-full lg:w-[68%] pl-0 lg:pl-20 flex flex-col relative">
+        <div className="w-full lg:w-9/12 pl-0 lg:pl-20 flex flex-col relative">
           
           {/* Sticky Right Controls (hidden on mobile) */}
           <div className="hidden lg:block absolute right-0 top-0 h-full w-24 pointer-events-none z-20">
@@ -163,7 +163,7 @@ export default function Services() {
                   
                   {/* Mobile Pagination Number */}
                   <div className="text-primary-1 text-4xl font-medium leading-none lg:hidden">
-                    {i + 1}<span className="text-gray-200 text-2xl">/4</span>
+                    {i + 1}<span className="text-gray-200 text-base">/3</span>
                   </div>
                 </div>
 
@@ -188,7 +188,7 @@ export default function Services() {
                 </div>
 
                 {/* Bottom Pagination Dashes */}
-                <div className="flex gap-2 lg:gap-3 justify-center mt-20 max-w-3xl pr-0 lg:pr-24">
+                <div className="sticky bottom-8 z-20 flex gap-2 lg:gap-3 justify-center mt-20 max-w-3xl pr-0 lg:pr-24 py-4 bg-white/80 backdrop-blur-md rounded-xl">
                   {[0, 1, 2, 3].map((dashIdx) => (
                     <div 
                       key={dashIdx} 
