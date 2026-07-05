@@ -71,7 +71,7 @@ export default function Clients() {
   }, []);
 
   return (
-    <section id="projects" ref={containerRef} className="w-full px-4 py-12 md:px-12 lg:px-24 flex flex-col gap-12">
+    <section id="testimonial" ref={containerRef} className="w-full px-4 py-12 md:px-12 lg:px-24 flex flex-col gap-12">
       {/* Top Section - Logos and Title */}
       <div className="flex flex-col-reverse md:flex-row gap-8 lg:gap-12 w-full">
         {/* Logos Grid */}
@@ -154,8 +154,8 @@ export default function Clients() {
         </div>
 
         {/* Large Quote Icon Background */}
-        <div className="absolute right-4 top-1/5 md:right-16 md:top-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-[#BCE1D8] rounded-full flex items-center justify-center pointer-events-none z-10">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="#2D9F90" xmlns="http://www.w3.org/2000/svg">
+        <div className="absolute right-4 top-1/5 md:right-16 md:top-1/2 -translate-y-1/2 w-16 h-16 md:w-32 md:h-32 bg-[#BCE1D8] rounded-full flex items-center justify-center pointer-events-none z-10">
+          <svg className="w-8 h-8 md:w-12 md:h-12" viewBox="0 0 24 24" fill="#2D9F90" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
           </svg>
         </div>

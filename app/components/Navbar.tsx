@@ -34,13 +34,13 @@ export default function Navbar() {
         <Link href="/" className="text-primary-1 border-b-2 border-primary-1 pb-1">Home</Link>
         <Link href="/about" className="hover:text-primary-1 transition-colors">About Us</Link>
         <Link href="#services" className="hover:text-primary-1 transition-colors">Services</Link>
-        <Link href="#projects" className="hover:text-primary-1 transition-colors">Projects</Link>
+        <Link href="#testimonial" className="hover:text-primary-1 transition-colors">Testimonials</Link>
         <Link href="/gallery" className="hover:text-primary-1 transition-colors">Gallery</Link>
         <Link href="/contact" className="hover:text-primary-1 transition-colors">Contact</Link>
       </div>
 
       <div className="flex items-center gap-3">
-        <a href="tel:+919999999999" className="w-10 h-10 rounded-full border-2 border-primary-1 flex items-center justify-center text-primary-1 shrink-0 hover:bg-primary-1 hover:text-white transition-colors">
+        <a href="tel:+919999999999" className="w-10 h-10 rounded-full border md:border-2 border-primary-1 flex items-center justify-center text-primary-1 shrink-0 hover:bg-primary-1 hover:text-white transition-colors">
           <Phone className="w-5 h-5" />
         </a>
         <div className="hidden sm:flex flex-col mr-2 md:mr-0">
