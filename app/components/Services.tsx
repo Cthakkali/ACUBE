@@ -96,12 +96,12 @@ export default function Services() {
         
         {/* Sticky Left Panel */}
         <div className="w-full lg:w-3/12 shrink-0 relative mb-12 lg:mb-0">
-          <div className="lg:sticky lg:top-24 bg-primary-1 text-white p-10 lg:p-14 rounded-[2.5rem] flex flex-col justify-center min-h-[500px] lg:min-h-[640px] z-10 shadow-2xl shadow-primary-1/40">
-            <h3 className="text-sm font-semibold tracking-wide mb-12">Our Services</h3>
+          <div className="lg:sticky lg:top-24 bg-primary-1 text-white p-10 lg:p-14 rounded-[2.5rem] flex flex-col justify-center min-h-[420px] lg:min-h-[550px] z-10 shadow-2xl shadow-primary-1/40">
+            <h3 className="text-sm font-semibold tracking-wide mb-8">Our Services</h3>
             <div>
-              <h2 className="text-[2rem] lg:text-[2.5rem] font-bold leading-[1.3] mb-6">
+              <h2 className="text-3xl font-bold mb-6">
                 Comprehensive<br/>Solution for<br/>
-                <span className="text-[#A0DAAD] font-semibold">Workforce<br/>Developement</span>
+                <span className="text-[#A0DAAD] font-semibold">Workforce</span><br/>Development
               </h2>
               <div className="w-12 h-0.5 bg-[#A0DAAD]"></div>
             </div>

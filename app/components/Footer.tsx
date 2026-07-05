@@ -141,9 +141,10 @@ export default function Footer() {
         <div>
           &copy; 2026 A-Cube Institute of Skills | Developed by <span className="font-medium"><a href="https://jadbery.com" className="text-white hover:underline">Jadbery Digital</a></span>
         </div>
-        <div className="flex gap-6 font-medium">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 font-medium">
           <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
           <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+          <Link href="#" className="hover:text-white transition-colors">Disclaimer</Link>
         </div>
       </div>
     </footer>

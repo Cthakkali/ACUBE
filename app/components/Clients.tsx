@@ -40,13 +40,20 @@ export default function Clients() {
       {/* Top Section - Logos and Title */}
       <div className="flex flex-col md:flex-row gap-8 lg:gap-12 w-full">
         {/* Logos Grid */}
-        <div className="w-full md:w-2/3 bg-white rounded-3xl p-8 lg:p-12  grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="w-full md:w-2/3 bg-white rounded-3xl p-8 lg:p-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
           {clients.map((client, idx) => (
             <div key={idx} className="flex items-center justify-center">
-              <div className="text-primary-1 font-bold text-2xl tracking-tighter italic border-b-4 border-blue-800 flex items-center relative">
-                {/* This represents the Antrix logo placeholder */}
-                <span className="text-blue-900 italic font-black text-3xl">ANTRIX</span>
-                <span className="absolute top-0 right-0 text-red-500 text-[10px] uppercase font-sans">एन्ट्रिक्स</span>
+              <div className="w-28 h-12 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                {/* User can replace these placeholder src paths with actual logo files */}
+                <img 
+                  src={`clients/client-${idx + 1}.png`} 
+                  alt={`Client Logo ${idx + 1}`}
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => {
+                    // Fallback visual if image doesn't exist yet
+                    (e.target as HTMLImageElement).src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 100 40"><rect width="100" height="40" fill="%23f3f4f6"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="12" fill="%239ca3af">LOGO ${idx + 1}</text></svg>`;
+                  }}
+                />
               </div>
             </div>
           ))}
