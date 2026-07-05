@@ -73,7 +73,7 @@ export default function Clients() {
   return (
     <section id="projects" ref={containerRef} className="w-full px-4 py-12 md:px-12 lg:px-24 flex flex-col gap-12">
       {/* Top Section - Logos and Title */}
-      <div className="flex flex-col md:flex-row gap-8 lg:gap-12 w-full">
+      <div className="flex flex-col-reverse md:flex-row gap-8 lg:gap-12 w-full">
         {/* Logos Grid */}
         <div className="logos-grid w-full md:w-2/3 bg-white rounded-3xl p-6 md:p-8 lg:p-12 grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-8">
           {clients.map((client, idx) => (

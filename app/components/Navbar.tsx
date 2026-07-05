@@ -24,7 +24,7 @@ export default function Navbar() {
             alt="A-Cube Logo"
             width={200}
             height={40}
-            style={{ height: "auto" }}
+            style={{ width: "auto", height: "auto" }}
             priority
           />
         </Link>

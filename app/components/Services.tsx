@@ -139,6 +139,15 @@ export default function Services() {
 
         {/* Right Content - Scrollable */}
         <div className="w-full lg:w-9/12 pl-0 lg:pl-20 flex flex-col relative services-right">
+          
+          {/* Mobile Global Pagination Number (Sticky Track) */}
+          <div className="lg:hidden absolute right-0 top-0 h-full pointer-events-none z-30">
+            <div className="sticky top-24 pt-2 pr-2">
+              <div className="text-primary-1 text-3xl font-medium leading-none bg-white/70 backdrop-blur-[2px] rounded-2xl px-2 pb-1">
+                {activeIndex + 1}<span className="text-gray-200 text-lg">/{servicesData.length}</span>
+              </div>
+            </div>
+          </div>
 
           {/* Sticky Right Controls (hidden on mobile) */}
           <div className="hidden lg:block absolute right-0 top-0 h-full w-24 pointer-events-none z-20">
@@ -146,7 +155,7 @@ export default function Services() {
 
               {/* Pagination Number */}
               <div className="text-primary-1 text-[4rem] font-medium leading-none mb-16 lg:translate-x-12 transition-all duration-300">
-                {activeIndex + 1}<span className="text-gray-200 text-lg">/4</span>
+                {activeIndex + 1}<span className="text-gray-200 text-lg">/{servicesData.length}</span>
               </div>
 
               {/* Vertical Navigation Dots */}
@@ -175,6 +184,8 @@ export default function Services() {
                 ref={(el) => { observerRefs.current[i] = el; }}
                 className="flex flex-col justify-center relative min-h-[50vh]"
               >
+
+
                 {/* Header Area */}
                 <div className="flex justify-between items-start w-full mb-10 relative">
                   <div className="flex items-center gap-6 lg:gap-10">
@@ -187,11 +198,6 @@ export default function Services() {
                       </h2>
                       <div className="w-10 h-0.5 bg-gray-500"></div>
                     </div>
-                  </div>
-
-                  {/* Mobile Pagination Number */}
-                  <div className="text-primary-1 text-4xl font-medium leading-none lg:hidden">
-                    {i + 1}<span className="text-gray-200 text-sm">/4</span>
                   </div>
                 </div>
 

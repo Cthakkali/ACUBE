@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <footer className="w-full flex flex-col">
       {/* CTA & Contact Section */}
-      <section className="relative w-full bg-cta-gradient text-white px-4 py-12 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-8 lg:gap-24 overflow-hidden">
+      <section className="relative w-full bg-cta-gradient text-white px-4 py-12 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-8 lg:gap-24 overflow-hidden rounded-t-2xl">
 
         {/* Background Image overlay */}
-        <div className="absolute right-0 bottom-0 w-full h-48 lg:w-1/2  z-0 opacity-25 mix-blend-overlay bg-no-repeat bg-right bg-cover lg:bg-contain  pointer-events-none" style={{ backgroundImage: 'url("/cta image.png")' }}></div>
+        <div className="absolute right-0 bottom-0 w-full h-48 lg:w-1/2  z-0 opacity-15 lg:opacity-20 mix-blend-overlay bg-no-repeat bg-right bg-cover lg:bg-contain  pointer-events-none" style={{ backgroundImage: 'url("/cta image.png")' }}></div>
 
         {/* Left CTA */}
         <div className="w-full lg:w-1/2 z-10 flex flex-col items-start">
@@ -37,7 +37,10 @@ export default function Footer() {
               <Phone className="w-6 h-6 shrink-0 text-white" />
               <div>
                 <h4 className="font-bold mb-1 text-sm">Contact Us</h4>
-                <p className="text-xs text-white leading-relaxed font-medium">91 9894 751 538<br />0421 661 4336</p>
+                <div className="text-xs text-white leading-relaxed font-medium flex flex-col gap-1">
+                  <a href="tel:+919894751538" className="hover:text-primary-1 transition-colors">91 9894 751 538</a>
+                  <a href="tel:04216614336" className="hover:text-primary-1 transition-colors">0421 661 4336</a>
+                </div>
               </div>
             </div>
             <div className="flex gap-4">

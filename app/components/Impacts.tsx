@@ -75,44 +75,46 @@ export default function Impacts() {
   ];
 
   return (
-    <section ref={containerRef} className="m-4 md:m-8 rounded-4xl p-8 lg:px-12 bg-white flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
-      {/* Left Content */}
-      <div className="w-full lg:w-1/3 pt-8 impact-left">
-        <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Impacts</h3>
-        <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Numbers.</h2>
-        <p className="text-gray-600 text-sm max-w-xs leading-relaxed mb-2">
-          our impact in creating meaningful opportunities and driving sustainable change
-        </p> {/* Divider Line */}
-        <div className="w-12 h-1 mt-4 mb-2 bg-primary-gradient"></div>
-      </div>
+    <section id="impacts" ref={containerRef} className="w-full px-4 py-8 md:px-12 lg:px-24">
+      <div className="w-full bg-white rounded-4xl p-8 lg:px-12 py-12 flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 shadow-sm">
+        {/* Left Content */}
+        <div className="w-full lg:w-1/3 pt-8 impact-left">
+          <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Impacts</h3>
+          <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Numbers.</h2>
+          <p className="text-gray-600 text-sm max-w-xs leading-relaxed mb-2">
+            our impact in creating meaningful opportunities and driving sustainable change
+          </p> {/* Divider Line */}
+          <div className="w-12 h-1 mt-4 mb-2 bg-primary-gradient"></div>
+        </div>
 
-      {/* Right Content / Grid */}
-      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 impact-grid">
-        {stats.map((stat, index) => (
-          <div key={index} className="impact-card">
-            <div className="group flex flex-col items-center justify-center p-4 lg:p-8 rounded-4xl border transition-all duration-300 hover:-translate-y-1 bg-white hover:bg-primary-1 text-black hover:text-white border-gray-100 hover:border-primary-1 shadow-xs hover:shadow-xl hover:shadow-primary-1/20 h-full w-full">
-              {/* Icon Circle */}
-              <div className="w-14 h-14 rounded-full flex items-center justify-center transition-colors duration-300 bg-background text-primary-1 group-hover:bg-white/10 group-hover:text-white">
-                {stat.icon}
-              </div>
+        {/* Right Content / Grid */}
+        <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 impact-grid">
+          {stats.map((stat, index) => (
+            <div key={index} className="impact-card">
+              <div className="group flex flex-col items-center justify-center p-4 lg:p-8 rounded-4xl border transition-all duration-300 hover:-translate-y-1 bg-white hover:bg-primary-1 text-black hover:text-white border-gray-100 hover:border-primary-1 shadow-xs hover:shadow-xl hover:shadow-primary-1/20 h-full w-full">
+                {/* Icon Circle */}
+                <div className="w-14 h-14 rounded-full flex items-center justify-center transition-colors duration-300 bg-background text-primary-1 group-hover:bg-white/10 group-hover:text-white">
+                  {stat.icon}
+                </div>
 
-              {/* Number */}
-              <div className="text-[28px] lg:text-[32px] font-bold text-primary-1 group-hover:text-white tracking-tight transition-colors duration-300">
-                {stat.number}
-              </div>
+                {/* Number */}
+                <div className="text-[28px] lg:text-[32px] font-bold text-primary-1 group-hover:text-white tracking-tight transition-colors duration-300">
+                  {stat.number}
+                </div>
 
-              {/* Divider Line */}
-              <div className="w-10 h-1 mb-3 rounded-full relative overflow-hidden bg-primary-gradient shrink-0">
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+                {/* Divider Line */}
+                <div className="w-10 h-1 mb-3  relative overflow-hidden bg-primary-gradient shrink-0">
+                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
 
-              {/* Label */}
-              <div className="text-[11px] lg:text-xs text-center font-medium leading-[1.6] transition-colors duration-300 text-black group-hover:text-white/90">
-                {stat.label}
+                {/* Label */}
+                <div className="text-[11px] lg:text-xs text-center font-medium leading-[1.6] transition-colors duration-300 text-black group-hover:text-white/90">
+                  {stat.label}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
