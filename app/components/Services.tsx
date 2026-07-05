@@ -120,7 +120,7 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full relative px-4 py-12 md:px-12 lg:px-24 bg-white services-section">
+    <section id="services" className="w-full relative px-4 py-12 md:px-12 lg:px-24 bg-white services-section">
       <div className="w-full flex flex-col lg:flex-row relative">
 
         {/* Sticky Left Panel */}
@@ -146,7 +146,7 @@ export default function Services() {
 
               {/* Pagination Number */}
               <div className="text-primary-1 text-[4rem] font-medium leading-none mb-16 lg:translate-x-12 transition-all duration-300">
-                {activeIndex + 1}<span className="text-gray-200 text-2xl">/4</span>
+                {activeIndex + 1}<span className="text-gray-200 text-lg">/4</span>
               </div>
 
               {/* Vertical Navigation Dots */}

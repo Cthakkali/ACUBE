@@ -71,7 +71,7 @@ export default function Clients() {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full px-4 py-12 md:px-12 lg:px-24 flex flex-col gap-12">
+    <section id="projects" ref={containerRef} className="w-full px-4 py-12 md:px-12 lg:px-24 flex flex-col gap-12">
       {/* Top Section - Logos and Title */}
       <div className="flex flex-col md:flex-row gap-8 lg:gap-12 w-full">
         {/* Logos Grid */}
