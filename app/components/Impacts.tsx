@@ -35,7 +35,7 @@ export default function Impacts() {
   ];
 
   return (
-    <section className="mx-8 rounded-4xl px-6 py-20 md:px-12 lg:px-24 bg-white flex flex-col lg:flex-row items-center lg:items-start gap-12">
+    <section className="m-8 rounded-4xl px-6 py-20 md:px-12 lg:px-24 bg-white flex flex-col lg:flex-row items-center lg:items-start gap-12">
       {/* Left Content */}
       <div className="w-full lg:w-1/3 pt-8">
         <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Impacts</h3>
