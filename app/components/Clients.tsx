@@ -1,7 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Quote } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const testimonials = [
   {
@@ -24,8 +29,38 @@ const testimonials = [
 
 export default function Clients() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef<HTMLElement>(null);
+
   // Creating an array of 8 dummy clients to represent the 4x2 grid of "ANTRIX" logos in mockup
   const clients = Array(8).fill("ANTRIX");
+
+  // GSAP Animations
+  useGSAP(() => {
+    // Animate logos staggering in
+    gsap.from(".client-logo", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".logos-grid",
+        start: "top 85%",
+      }
+    });
+
+    // Animate text box
+    gsap.from(".title-box", {
+      x: 30,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".title-box",
+        start: "top 85%",
+      }
+    });
+  }, { scope: containerRef });
 
   // Auto-rotate testimonials
   useEffect(() => {
@@ -36,13 +71,13 @@ export default function Clients() {
   }, []);
 
   return (
-    <section className="w-full px-6 py-20 md:px-12 lg:px-24 flex flex-col gap-12">
+    <section ref={containerRef} className="w-full px-6 py-20 md:px-12 lg:px-24 flex flex-col gap-12">
       {/* Top Section - Logos and Title */}
       <div className="flex flex-col md:flex-row gap-8 lg:gap-12 w-full">
         {/* Logos Grid */}
-        <div className="w-full md:w-2/3 bg-white rounded-3xl p-8 lg:p-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="logos-grid w-full md:w-2/3 bg-white rounded-3xl p-8 lg:p-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
           {clients.map((client, idx) => (
-            <div key={idx} className="flex items-center justify-center">
+            <div key={idx} className="client-logo flex items-center justify-center">
               <div className="w-28 h-12 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                 {/* User can replace these placeholder src paths with actual logo files */}
                 <img 
@@ -60,12 +95,12 @@ export default function Clients() {
         </div>
 
         {/* Title Box */}
-        <div className="w-full md:w-1/3 bg-white rounded-3xl p-8 lg:p-12  flex flex-col justify-center">
-          <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-4">Our Proud</h3>
+        <div className="title-box w-full md:w-1/3 bg-white rounded-3xl p-24 flex flex-col justify-center">
+          <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase">Our Proud</h3>
           <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Clients.</h2>
-          <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+          <p className="text-gray-600 text-xs leading-relaxed max-w-xs">
             Partnering with visionaries to shape the future of business.
-          </p>
+          </p> <div className="w-12 h-1 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] mt-4"></div>
         </div>
       </div>
 

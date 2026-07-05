@@ -1,6 +1,46 @@
+"use client";
+
 import { UsersRound, FolderOpen, Landmark, Map, HeartHandshake } from "lucide-react";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Impacts() {
+  const containerRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    // Left content slides in from the left
+    gsap.from(".impact-left > *", {
+      x: -30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        
+      }
+    });
+
+    // Cards stagger in from the bottom
+    gsap.from(".impact-card", {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        
+      }
+    });
+  }, { scope: containerRef });
+
   const stats = [
     {
       icon: <UsersRound className="w-6 h-6" strokeWidth={1.5} />,
@@ -35,41 +75,39 @@ export default function Impacts() {
   ];
 
   return (
-    <section className="m-8 rounded-4xl px-6 py-20 md:px-12 lg:px-24 bg-white flex flex-col lg:flex-row items-center lg:items-start gap-12">
+    <section ref={containerRef} className="m-8 rounded-4xl px-6 py-20 md:px-12 lg:px-24 bg-white flex flex-col lg:flex-row items-center lg:items-start gap-12">
       {/* Left Content */}
-      <div className="w-full lg:w-1/3 pt-8">
+      <div className="w-full lg:w-1/3 pt-8 impact-left">
         <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Impacts</h3>
         <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Numbers.</h2>
         <p className="text-gray-600 text-sm max-w-xs leading-relaxed mb-2">
           our impact in creating meaningful opportunities and driving sustainable change
         </p> {/* Divider Line */}
         <div className="w-8 h-[2px] mb-2 transition-all duration-300 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] group-hover:from-white/60 group-hover:to-white/60"></div>
-
       </div>
 
       {/* Right Content / Grid */}
-      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
+      <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 impact-grid">
         {stats.map((stat, index) => (
-          <div
-            key={index}
-            className="group flex flex-col items-center justify-center p-4 lg:p-8 rounded-4xl border transition-all duration-300 hover:-translate-y-1 bg-white hover:bg-primary-1 text-black hover:text-white border-gray-100 hover:border-primary-1 shadow-sm hover:shadow-xl hover:shadow-primary-1/20"
-          >
-            {/* Icon Circle */}
-            <div className="w-14 h-14 rounded-full flex items-center justify-center transition-colors duration-300 bg-background text-primary-1 group-hover:bg-white/10 group-hover:text-white">
-              {stat.icon}
-            </div>
+          <div key={index} className="impact-card">
+            <div className="group flex flex-col items-center justify-center p-4 lg:p-8 rounded-4xl border transition-all duration-300 hover:-translate-y-1 bg-white hover:bg-primary-1 text-black hover:text-white border-gray-100 hover:border-primary-1 shadow-sm hover:shadow-xl hover:shadow-primary-1/20 h-full w-full">
+              {/* Icon Circle */}
+              <div className="w-14 h-14 rounded-full flex items-center justify-center transition-colors duration-300 bg-background text-primary-1 group-hover:bg-white/10 group-hover:text-white">
+                {stat.icon}
+              </div>
 
-            {/* Number */}
-            <div className="text-[28px] lg:text-[32px] font-bold tracking-tight ">
-              {stat.number}
-            </div>
+              {/* Number */}
+              <div className="text-[28px] lg:text-[32px] font-bold tracking-tight ">
+                {stat.number}
+              </div>
 
-            {/* Divider Line */}
-            <div className="w-8 h-[2px] mb-2 transition-all duration-300 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] group-hover:from-white/60 group-hover:to-white/60"></div>
+              {/* Divider Line */}
+              <div className="w-8 h-[2px] mb-2 transition-all duration-300 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] group-hover:from-white/60 group-hover:to-white/60"></div>
 
-            {/* Label */}
-            <div className="text-[11px] lg:text-xs text-center font-medium leading-[1.6] transition-colors duration-300 text-gray-500 group-hover:text-white/90">
-              {stat.label}
+              {/* Label */}
+              <div className="text-[11px] lg:text-xs text-center font-medium leading-[1.6] transition-colors duration-300 text-gray-500 group-hover:text-white/90">
+                {stat.label}
+              </div>
             </div>
           </div>
         ))}

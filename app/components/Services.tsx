@@ -2,6 +2,11 @@
 
 import { UserCheck, Users, Briefcase, UserCog, GraduationCap, UserPlus } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -62,6 +67,30 @@ export default function Services() {
     }
   ];
 
+  useGSAP(() => {
+    gsap.from(".services-left", {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".services-section",
+        start: "top 80%",
+      }
+    });
+    
+    gsap.from(".services-right", {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".services-section",
+        start: "top 75%",
+      }
+    });
+  });
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -91,11 +120,11 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full relative px-6 py-20 md:px-12 lg:px-24 bg-white">
+    <section className="w-full relative px-6 py-20 md:px-12 lg:px-24 bg-white services-section">
       <div className="w-full flex flex-col lg:flex-row relative">
         
         {/* Sticky Left Panel */}
-        <div className="w-full lg:w-3/12 shrink-0 relative mb-12 lg:mb-0">
+        <div className="w-full lg:w-3/12 shrink-0 relative mb-12 lg:mb-0 services-left">
           <div className="lg:sticky lg:top-24 bg-primary-1 text-white p-10 lg:p-14 rounded-[2.5rem] flex flex-col justify-center min-h-[420px] lg:min-h-[550px] z-10 shadow-2xl shadow-primary-1/40">
             <h3 className="text-sm font-semibold tracking-wide mb-8">Our Services</h3>
             <div>
@@ -109,7 +138,7 @@ export default function Services() {
         </div>
 
         {/* Right Content - Scrollable */}
-        <div className="w-full lg:w-9/12 pl-0 lg:pl-20 flex flex-col relative">
+        <div className="w-full lg:w-9/12 pl-0 lg:pl-20 flex flex-col relative services-right">
           
           {/* Sticky Right Controls (hidden on mobile) */}
           <div className="hidden lg:block absolute right-0 top-0 h-full w-24 pointer-events-none z-20">
