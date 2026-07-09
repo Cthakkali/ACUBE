@@ -5,27 +5,11 @@ import { Quote } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import data from "../data.json";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const testimonials = [
-  {
-    text: "Acube has transformed the way we handle our digital presence. Their expertise and dedication are unmatched. Truly a game-changer for our business.",
-    author: "Partner Leadership Team"
-  },
-  {
-    text: "The level of professionalism and the quality of work delivered by the team exceeded all our expectations. We highly recommend their services.",
-    author: "Marketing Director, TechCorp"
-  },
-  {
-    text: "Working with them was a seamless experience. They understood our vision perfectly and executed it with flawless precision.",
-    author: "CEO, Innovate Solutions"
-  },
-  {
-    text: "An absolute pleasure to collaborate with. They brought fresh ideas to the table and delivered outstanding results within the timeline.",
-    author: "Head of Product, GlobalTech"
-  }
-];
+const testimonials = data.clients.testimonials;
 
 export default function Clients() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -96,10 +80,10 @@ export default function Clients() {
 
         {/* Title Box */}
         <div className="title-box w-full md:w-1/3 bg-white rounded-3xl p-10 lg:p-24 flex flex-col justify-center">
-          <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase">Our Proud</h3>
-          <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Clients.</h2>
+          <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase">{data.clients.badge}</h3>
+          <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">{data.clients.title}</h2>
           <p className="text-gray-600 text-xs leading-relaxed max-w-xs">
-            Partnering with visionaries to shape the future of business.
+            {data.clients.description}
           </p> <div className="w-12 h-1 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] mt-4"></div>
         </div>
       </div>
@@ -116,11 +100,11 @@ export default function Clients() {
         {/* Left Column */}
         <div className="w-full md:w-1/4 mb-8 md:mb-0 relative z-10 flex flex-col justify-center md:border-r border-[#CDE3DE] md:pr-8">
           <div className="bg-[#E0F0EE] text-[#2D9F90] text-[10px] font-bold px-3 py-1.5 rounded-md inline-block tracking-wider w-max">
-            TRUSTED BY PARTNERS
+            {data.clients.partnerBadge}
           </div>
           <h2 className="text-3xl font-bold text-[#333333] leading-tight mb-4">
-            What Our <br />
-            <span className="bg-linear-to-r from-[#5BB79F] to-[#92D1AA] bg-clip-text text-transparent">Partners Say</span>
+            {data.clients.partnerTitle} <br />
+            <span className="bg-linear-to-r from-[#5BB79F] to-[#92D1AA] bg-clip-text text-transparent">{data.clients.partnerHighlight}</span>
           </h2>
           <div className="w-12 h-[2px] bg-[#92D1AA]"></div>
         </div>

@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MapPin, Phone, Mail, Send, MessageSquare, Loader2, CheckCircle2 } from "lucide-react";
+import data from "../data.json";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -63,7 +64,7 @@ export default function Contact() {
     // Web3Forms access key (using env variable)
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE");
     // Add subject line for the email notification
-    formData.append("subject", "New Contact Form Submission from A-Cube Website");
+    formData.append("subject", "New Contact Form Submission from Website");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -101,12 +102,12 @@ export default function Contact() {
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary-1 mb-6 shadow-sm">
               <MessageSquare className="w-8 h-8" />
             </div>
-            <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Get In Touch</h3>
+            <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">{data.contact.header.badge}</h3>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Let's <span className="text-primary-1">Connect.</span>
+              {data.contact.header.titlePart1}<span className="text-primary-1">{data.contact.header.titleHighlight}</span>
             </h1>
             <p className="text-gray-500 text-base max-w-2xl leading-relaxed">
-              Whether you need skilled manpower, corporate training, or HR consulting, our team is ready to help your business grow.
+              {data.contact.header.description}
             </p>
           </div>
         </section>
@@ -118,32 +119,34 @@ export default function Contact() {
             {/* Left Column - Contact Info */}
             <div className="w-full lg:w-5/12 flex flex-col gap-6">
               {/* Head Office */}
-              <div className="contact-info-card bg-white p-8 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden group hover:shadow-md transition-shadow">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-primary-1"></div>
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 bg-primary-1/10 rounded-full flex items-center justify-center text-primary-1 shrink-0 group-hover:scale-110 transition-transform">
+              <div className="contact-info-card bg-gray-50 p-8 rounded-4xl relative overflow-hidden group hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-transparent hover:border-gray-100">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-primary-1/5 rounded-bl-[3rem] transition-colors duration-500 group-hover:bg-primary-1/10"></div>
+                
+                <div className="flex flex-col gap-5 relative z-10">
+                  <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-primary-1 group-hover:scale-110 group-hover:bg-primary-1 group-hover:text-white transition-all duration-500 border border-gray-100 group-hover:border-primary-1">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Head Office</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-1 transition-colors duration-300">{data.contact.info.headOffice.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      No:84, Sai Best Complex, Second Floor, Kuppana Chetty Street, Palladam road, Tiruppur - 641604
+                      {data.contact.info.headOffice.address}
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Registered Office */}
-              <div className="contact-info-card bg-white p-8 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden group hover:shadow-md transition-shadow">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-[#A0DAAD]"></div>
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 bg-[#A0DAAD]/20 rounded-full flex items-center justify-center text-[#2D9F90] shrink-0 group-hover:scale-110 transition-transform">
+              <div className="contact-info-card bg-gray-50 p-8 rounded-4xl relative overflow-hidden group hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-transparent hover:border-gray-100">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#A0DAAD]/10 rounded-bl-[3rem] transition-colors duration-500 group-hover:bg-[#A0DAAD]/20"></div>
+                
+                <div className="flex flex-col gap-5 relative z-10">
+                  <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-[#2D9F90] group-hover:scale-110 group-hover:bg-[#2D9F90] group-hover:text-white transition-all duration-500 border border-gray-100 group-hover:border-[#2D9F90]">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Registered Office</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#2D9F90] transition-colors duration-300">{data.contact.info.registeredOffice.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      IInd Floor, Sibi's Nest, 042/14, Near Kannaki Departmental Stores, Perundurai Main Road, Thindal, Erode – 638012
+                      {data.contact.info.registeredOffice.address}
                     </p>
                   </div>
                 </div>
@@ -153,7 +156,7 @@ export default function Contact() {
               <div className="contact-info-card bg-primary-1 p-8 rounded-3xl shadow-lg relative overflow-hidden text-white mt-2">
                 <div className="absolute -right-16 -top-16 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
                 
-                <h3 className="text-xl font-bold mb-6">Direct Contact</h3>
+                <h3 className="text-xl font-bold mb-6">{data.contact.info.directContact.title}</h3>
                 
                 <div className="flex flex-col gap-6">
                   <div className="flex items-center gap-4">
@@ -161,8 +164,9 @@ export default function Contact() {
                       <Phone className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <a href="tel:+919894751538" className="text-sm font-semibold hover:text-[#A0DAAD] transition-colors">+91 98947 51538</a>
-                      <a href="tel:04216614336" className="text-sm font-semibold hover:text-[#A0DAAD] transition-colors">0421 6614336</a>
+                      {data.contact.info.directContact.phones.map((phone, idx) => (
+                        <a key={idx} href={`tel:${phone.link}`} className="text-sm font-semibold hover:text-[#A0DAAD] transition-colors">{phone.display}</a>
+                      ))}
                     </div>
                   </div>
                   
@@ -172,8 +176,8 @@ export default function Contact() {
                     <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shrink-0">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <a href="mailto:acubeskills@gmail.com" className="text-sm font-semibold hover:text-[#A0DAAD] transition-colors">
-                      acubeskills@gmail.com
+                    <a href={`mailto:${data.contact.info.directContact.email}`} className="text-sm font-semibold hover:text-[#A0DAAD] transition-colors">
+                      {data.contact.info.directContact.email}
                     </a>
                   </div>
                 </div>
@@ -185,30 +189,30 @@ export default function Contact() {
               <div className="bg-white p-8 lg:p-12 rounded-[2.5rem] shadow-xl border border-gray-50 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary-1/5 rounded-bl-full pointer-events-none"></div>
                 
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a Message</h2>
-                <p className="text-gray-500 text-sm mb-8">We'll get back to you within 24 hours.</p>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">{data.contact.form.title}</h2>
+                <p className="text-gray-500 text-sm mb-8">{data.contact.form.subtitle}</p>
 
                 <form className="flex flex-col gap-6 relative z-10" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="name" className="text-xs font-bold text-gray-700 uppercase tracking-wide">Full Name</label>
+                      <label htmlFor="name" className="text-xs font-bold text-gray-700 uppercase tracking-wide">{data.contact.form.labels.name}</label>
                       <input 
                         type="text" 
                         id="name" 
                         name="name"
                         required
-                        placeholder="John Doe"
+                        placeholder={data.contact.form.placeholders.name}
                         className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary-1/50 focus:border-primary-1 transition-all"
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="email" className="text-xs font-bold text-gray-700 uppercase tracking-wide">Email Address</label>
+                      <label htmlFor="email" className="text-xs font-bold text-gray-700 uppercase tracking-wide">{data.contact.form.labels.email}</label>
                       <input 
                         type="email" 
                         id="email" 
                         name="email"
                         required
-                        placeholder="john@example.com"
+                        placeholder={data.contact.form.placeholders.email}
                         className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary-1/50 focus:border-primary-1 transition-all"
                       />
                     </div>
@@ -216,36 +220,36 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="phone" className="text-xs font-bold text-gray-700 uppercase tracking-wide">Phone Number</label>
+                      <label htmlFor="phone" className="text-xs font-bold text-gray-700 uppercase tracking-wide">{data.contact.form.labels.phone}</label>
                       <input 
                         type="tel" 
                         id="phone" 
                         name="phone"
-                        placeholder="+91 98765 43210"
+                        placeholder={data.contact.form.placeholders.phone}
                         className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary-1/50 focus:border-primary-1 transition-all"
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="subject" className="text-xs font-bold text-gray-700 uppercase tracking-wide">Subject</label>
+                      <label htmlFor="subject" className="text-xs font-bold text-gray-700 uppercase tracking-wide">{data.contact.form.labels.subject}</label>
                       <input 
                         type="text" 
                         id="subject" 
                         name="subject_user"
                         required
-                        placeholder="How can we help?"
+                        placeholder={data.contact.form.placeholders.subject}
                         className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary-1/50 focus:border-primary-1 transition-all"
                       />
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="message" className="text-xs font-bold text-gray-700 uppercase tracking-wide">Message</label>
+                    <label htmlFor="message" className="text-xs font-bold text-gray-700 uppercase tracking-wide">{data.contact.form.labels.message}</label>
                     <textarea 
                       id="message" 
                       name="message"
                       rows={5}
                       required
-                      placeholder="Write your message here..."
+                      placeholder={data.contact.form.placeholders.message}
                       className="w-full bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-primary-1/50 focus:border-primary-1 transition-all resize-none"
                     ></textarea>
                   </div>
@@ -253,7 +257,7 @@ export default function Contact() {
                   {submitStatus === "success" && (
                     <div className="bg-[#A0DAAD]/20 border border-[#2D9F90] text-[#00403C] p-4 rounded-xl flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#2D9F90]" />
-                      <p className="text-sm font-semibold">Message sent successfully! We'll be in touch soon.</p>
+                      <p className="text-sm font-semibold">{data.contact.form.successMessage}</p>
                     </div>
                   )}
 
@@ -271,9 +275,9 @@ export default function Contact() {
                     <span className="absolute inset-0 bg-linear-to-r from-primary-1 to-[#A0DAAD] opacity-0 group-hover:opacity-100 transition-opacity duration-300 disabled:opacity-0"></span>
                     <span className="relative z-10 flex items-center gap-2">
                       {isSubmitting ? (
-                        <>Sending... <Loader2 className="w-4 h-4 animate-spin" /></>
+                        <>{data.contact.form.submitButton.loading} <Loader2 className="w-4 h-4 animate-spin" /></>
                       ) : (
-                        <>Send Message <Send className="w-4 h-4" /></>
+                        <>{data.contact.form.submitButton.idle} <Send className="w-4 h-4" /></>
                       )}
                     </span>
                   </button>

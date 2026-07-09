@@ -1,0 +1,478 @@
+{
+  "metadata": {
+    "title": "A-Cube Institute of Skills",
+    "description": "Reliable Manpower for Every Industry."
+  },
+  "navbar": {
+    "phone": "+91 9999 999 999",
+    "phoneLink": "+919999999999",
+    "timings": "Mon-Sat : 09 00AM - 04 00 PM",
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "About Us", "href": "/about" },
+      { "label": "Services", "href": "/#services" },
+      { "label": "Testimonials", "href": "/#testimonial" },
+      { "label": "Gallery", "href": "/gallery" },
+      { "label": "Contact", "href": "/contact" }
+    ]
+  },
+  "hero": {
+    "badge": "Empowering People",
+    "titlePart1": "Reliable Manpower ",
+    "titlePart2": "for Every ",
+    "titleHighlight": "Industry.",
+    "tags": ["Skilled", "Unskilled", "Contract", "Permanent"],
+    "description": "A-Cube Institute of Skills helps businesses build dependable teams through skilled, unskilled, contract, and permanent manpower solutions. We connect organizations with qualified professionals who are ready to contribute from day one, ensuring operational continuity and business growth.",
+    "button1": "Explore Services",
+    "button2": "Contact Us",
+    "stats": [
+      { "number": "2000+", "label1": "Candidates Trained", "label2": "" },
+      { "number": "5 Years+", "label1": "Experience", "label2": "" },
+      { "number": "Government", "label1": "& CSR Projects", "label2": "" },
+      { "number": "ISO", "label1": "9001:2015", "label2": "" }
+    ],
+    "images": {
+      "main": "/hero.png",
+      "stack1": "/hero-2.png",
+      "stack2": "/hero-1.png",
+      "stack3": "/hero-4.png"
+    }
+  },
+  "impacts": {
+    "badge": "Impacts",
+    "title": "Numbers.",
+    "description": "our impact in creating meaningful opportunities and driving sustainable change",
+    "stats": [
+      { "number": "2000+", "labelLine1": "Workers", "labelLine2": "Deployed" },
+      { "number": "10+", "labelLine1": "Industry", "labelLine2": "Served" },
+      { "number": "500+", "labelLine1": "Active", "labelLine2": "Workforce" },
+      { "number": "100+", "labelLine1": "Company", "labelLine2": "Partnered" },
+      { "number": "5+", "labelLine1": "States", "labelLine2": "Served" },
+      { "number": "99%", "labelLine1": "Deployment", "labelLine2": "Success rate" }
+    ]
+  },
+  "services": {
+    "badge": "Our Services",
+    "titlePart1": "Comprehensive",
+    "titlePart2": "Solution for",
+    "titleHighlight": "Workforce",
+    "titlePart3": "Development",
+    "servicesData": [
+      {
+        "id": "service-1",
+        "titleLine1": "Human Resouce",
+        "titleLine2": "Supply",
+        "desc": "We offer comprehensive workforce solutions, providing both skilled and unskilled manpower alongside flexible contract, temporary, and permanent staffing to ensure your business always has the exact talent it needs to succeed.",
+        "items": [
+          "Skilled Manpower Supply",
+          "Unskilled Manpower Supply",
+          "Temporary and Permanent Staffing",
+          "Contract Staffing Solutions"
+        ]
+      },
+      {
+        "id": "service-2",
+        "titleLine1": "Corporate",
+        "titleLine2": "Training",
+        "desc": "Empower your workforce with our comprehensive training programs. We deliver industry-leading certifications, leadership coaching, and technical skills development tailored to your business goals.",
+        "items": [
+          "Leadership Development",
+          "Technical Skills Training",
+          "Soft Skills Workshops",
+          "Industry Certifications"
+        ]
+      },
+      {
+        "id": "service-3",
+        "titleLine1": "Payroll",
+        "titleLine2": "Management",
+        "desc": "Streamline your HR operations with our comprehensive payroll management system. We handle everything from tax compliance and benefits administration to precise and timely salary disbursements.",
+        "items": [
+          "Automated Payroll System",
+          "Tax & Legal Compliance",
+          "Benefits Administration",
+          "Leave & Attendance Management"
+        ]
+      },
+      {
+        "id": "service-4",
+        "titleLine1": "Executive",
+        "titleLine2": "Search",
+        "desc": "Find the perfect leaders for your organization. Our executive search service utilizes an extensive global network to identify, evaluate, and recruit top-tier management and C-level professionals.",
+        "items": [
+          "C-Level Recruitment",
+          "Board Member Search",
+          "Interim Executive Management",
+          "Leadership Assessment"
+        ]
+      }
+    ]
+  },
+  "clients": {
+    "badge": "Our Proud",
+    "title": "Clients.",
+    "description": "Partnering with visionaries to shape the future of business.",
+    "partnerBadge": "TRUSTED BY PARTNERS",
+    "partnerTitle": "What Our ",
+    "partnerHighlight": "Partners Say",
+    "testimonials": [
+      {
+        "text": "Acube has transformed the way we handle our digital presence. Their expertise and dedication are unmatched. Truly a game-changer for our business.",
+        "author": "Partner Leadership Team"
+      },
+      {
+        "text": "The level of professionalism and the quality of work delivered by the team exceeded all our expectations. We highly recommend their services.",
+        "author": "Marketing Director, TechCorp"
+      },
+      {
+        "text": "Working with them was a seamless experience. They understood our vision perfectly and executed it with flawless precision.",
+        "author": "CEO, Innovate Solutions"
+      },
+      {
+        "text": "An absolute pleasure to collaborate with. They brought fresh ideas to the table and delivered outstanding results within the timeline.",
+        "author": "Head of Product, GlobalTech"
+      }
+    ]
+  },
+  "footer": {
+    "cta": {
+      "title": "Need Reliable Manpower for your Business ?",
+      "description": "Partner with A-Cube Institute of Skills for reliable manpower, recruitment, HR consulting, and industry-focused skill development programs.",
+      "button1": "Get in touch",
+      "button2": "Download Profile"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "phones": [
+        { "display": "91 9894 751 538", "link": "+919894751538" },
+        { "display": "0421 661 4336", "link": "04216614336" }
+      ],
+      "emailTitle": "Enquiry",
+      "email": "acubeskills@gmail.com"
+    },
+    "office": {
+      "title": "Office Location",
+      "registered": {
+        "title": "Registered Office",
+        "addressLine1": "IInd Floor, Sibi's Nest, 042/14, Near Kannaki",
+        "addressLine2": "Departmental Stores, Perundurai Main Road,",
+        "addressLine3": "Thindal, Erode - 638012"
+      },
+      "head": {
+        "title": "Head office",
+        "addressLine1": "No:84, Sai Best Complex, Second Floor, Kuppana",
+        "addressLine2": "Chetty Street, Palladam road, Tiruppur- 641604"
+      }
+    },
+    "companyInfo": "A-Cube Institute of Skills is a leading human resource supply and skill development solutions provider committed to empowering individuals and supporting organization.",
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        { "label": "Home", "href": "/" },
+        { "label": "About us", "href": "/about" },
+        { "label": "Services", "href": "/#services" },
+        { "label": "Gallery", "href": "/gallery" },
+        { "label": "Contact Us", "href": "/contact" }
+      ]
+    },
+    "servicesLinks": {
+      "title": "Our Services",
+      "links": [
+        { "label": "Human Resource Supply", "href": "#" },
+        { "label": "Recruitment Service", "href": "#" },
+        { "label": "Skill development & Training", "href": "#" },
+        { "label": "HR Consulting", "href": "#" }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "items": [
+        "ISO 9001:2015 certified",
+        "Certificate of Incorporation",
+        "GST Registeration",
+        "MSME Registeration",
+        "EPF & ESIC Registeration",
+        "Labour Registeration"
+      ]
+    },
+    "bottomBar": {
+      "copyright": "© 2026 A-Cube Institute of Skills | Developed by",
+      "developer": "Jadbery Digital",
+      "developerLink": "https://jadbery.com",
+      "links": [
+        { "label": "Privacy Policy", "href": "/privacy" },
+        { "label": "Terms of Service", "href": "/terms" },
+        { "label": "Disclaimer", "href": "/disclaimer" }
+      ]
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Established 2021",
+      "titlePart1": "Empowering People Through ",
+      "titleHighlight": "Skills & Employment.",
+      "description": [
+        "A-Cube Institute of Skills is a leading human resources supply and skill development solutions provider committed to empowering individuals and supporting organizations through quality manpower and workforce development services.",
+        "With over 5 years of combined industry experience, we have established ourselves as a trusted partner for government departments, corporate organizations, CSR initiatives, and development projects across Tamil Nadu. We specialize in manpower supply, recruitment services, skill development, training implementation, and human resource consulting.",
+        "Our commitment to quality, reliability, and client satisfaction has enabled us to build long-term relationships while contributing to employment generation and workforce development."
+      ],
+      "floatingBadge": {
+        "title": "5+ Years",
+        "subtitle": "Industry Experience"
+      },
+      "image": "/hero-2.png"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the preferred partner for human resources supply and skill development solutions, delivering exceptional value to our clients and creating sustainable livelihood opportunities for individuals."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide high-quality human resources supply and skill development solutions that enhance our clients' productivity, competitiveness, and operational excellence while empowering youth and women through employability and livelihood initiatives."
+    },
+    "leadership": {
+      "badge": "Leadership",
+      "titlePart1": "Guiding Vision & ",
+      "titleHighlight": "Strategic Growth.",
+      "quote": "\"At A-Cube Institute of Skills, our core philosophy is rooted in the belief that the right talent coupled with the right opportunities can transform businesses and communities alike. We are dedicated to providing strategic leadership, driving organizational growth, and ensuring successful project implementations through active stakeholder engagement.\"",
+      "name": "ARUNVIGNESH P R",
+      "title": "Managing Director",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800"
+    },
+    "compliance": {
+      "badge": "Trust & Compliance",
+      "title": "Certifications & ",
+      "titleHighlight": "Registrations",
+      "description": "We maintain all statutory and operational compliances required for effective, reliable service delivery.",
+      "certifications": [
+        "ISO 9001:2015 Certified",
+        "Certificate of Incorporation",
+        "GST Registration",
+        "MSME Registration",
+        "EPF Registration",
+        "ESIC Registration",
+        "Labour Registration"
+      ]
+    }
+  },
+  "contact": {
+    "header": {
+      "badge": "Get In Touch",
+      "titlePart1": "Let's ",
+      "titleHighlight": "Connect.",
+      "description": "Whether you need skilled manpower, corporate training, or HR consulting, our team is ready to help your business grow."
+    },
+    "info": {
+      "headOffice": {
+        "title": "Head Office",
+        "address": "No:84, Sai Best Complex, Second Floor, Kuppana Chetty Street, Palladam road, Tiruppur - 641604"
+      },
+      "registeredOffice": {
+        "title": "Registered Office",
+        "address": "IInd Floor, Sibi's Nest, 042/14, Near Kannaki Departmental Stores, Perundurai Main Road, Thindal, Erode – 638012"
+      },
+      "directContact": {
+        "title": "Direct Contact",
+        "phones": [
+          { "display": "+91 98947 51538", "link": "+919894751538" },
+          { "display": "0421 6614336", "link": "04216614336" }
+        ],
+        "email": "acubeskills@gmail.com"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "subtitle": "We'll get back to you within 24 hours.",
+      "labels": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "phone": "+91 98765 43210",
+        "subject": "How can we help?",
+        "message": "Write your message here..."
+      },
+      "submitButton": {
+        "idle": "Send Message",
+        "loading": "Sending..."
+      },
+      "successMessage": "Message sent successfully! We'll be in touch soon."
+    }
+  },
+  "gallery": {
+    "header": {
+      "badge": "Our Gallery",
+      "titlePart1": "Moments of ",
+      "titleHighlight": "Impact.",
+      "description": "A visual journey through our training sessions, CSR initiatives, and the milestones we've achieved in empowering the workforce."
+    },
+    "images": [
+      { "src": "/hero.png", "alt": "Team Meeting", "span": "md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2" },
+      { "src": "/hero-1.png", "alt": "Training Session", "span": "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
+      { "src": "/hero-2.png", "alt": "CSR Event", "span": "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
+      { "src": "/hero-4.png", "alt": "Skill Development", "span": "md:col-span-1 md:row-span-2 lg:col-span-1 lg:row-span-2" },
+      { "src": "/0hero.png", "alt": "Corporate Office", "span": "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
+      { "src": "/1hero.png", "alt": "Manpower Deployment", "span": "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
+      { "src": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop", "alt": "Business Collaboration", "span": "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1" },
+      { "src": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop", "alt": "Team Discussion", "span": "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
+      { "src": "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop", "alt": "Workshop", "span": "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" }
+    ]
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "July 2026",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "At A-Cube Institute of Skills, accessible from acubeskills.in, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by A-Cube Institute of Skills and how we use it."
+        },
+        {
+          "type": "heading",
+          "text": "1. Information We Collect"
+        },
+        {
+          "type": "paragraph",
+          "text": "We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the Website, or otherwise when you contact us."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Personal Information Provided by You.** We collect names; phone numbers; email addresses; job titles; contact preferences; and other similar information.",
+            "**Log and Usage Data.** Log and usage data is service-related, diagnostic, usage, and performance information our servers automatically collect when you access or use our Website."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. How We Use Your Information"
+        },
+        {
+          "type": "paragraph",
+          "text": "We use personal information collected via our Website for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations."
+        },
+        {
+          "type": "list",
+          "items": [
+            "To facilitate account creation and logon process.",
+            "To send administrative information to you.",
+            "To fulfill and manage your orders/requests."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Sharing Your Information"
+        },
+        {
+          "type": "paragraph",
+          "text": "We only share information with your consent, to comply with laws, to provide you with services, to protect your rights, or to fulfill business obligations."
+        },
+        {
+          "type": "heading",
+          "text": "4. Contact Us"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you have questions or comments about this notice, you may email us at acubeskills@gmail.com or by post to:"
+        },
+        {
+          "type": "address",
+          "text": "A-Cube Institute of Skills\nNo:84, Sai Best Complex, Second Floor, \nKuppana Chetty Street, Palladam road, \nTiruppur- 641604"
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "July 2026",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Welcome to A-Cube Institute of Skills! These terms and conditions outline the rules and regulations for the use of A-Cube Institute of Skills's Website, located at acubeskills.in."
+        },
+        {
+          "type": "paragraph",
+          "text": "By accessing this website we assume you accept these terms and conditions. Do not continue to use A-Cube Institute of Skills if you do not agree to take all of the terms and conditions stated on this page."
+        },
+        {
+          "type": "heading",
+          "text": "1. License"
+        },
+        {
+          "type": "paragraph",
+          "text": "Unless otherwise stated, A-Cube Institute of Skills and/or its licensors own the intellectual property rights for all material on A-Cube Institute of Skills. All intellectual property rights are reserved. You may access this from A-Cube Institute of Skills for your own personal use subjected to restrictions set in these terms and conditions."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Republish material from A-Cube Institute of Skills",
+            "Sell, rent or sub-license material from A-Cube Institute of Skills",
+            "Reproduce, duplicate or copy material from A-Cube Institute of Skills",
+            "Redistribute content from A-Cube Institute of Skills"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. User Responsibilities"
+        },
+        {
+          "type": "paragraph",
+          "text": "You agree to use this website only for lawful purposes, and in a way that does not infringe the rights of, restrict or inhibit anyone else's use and enjoyment of the website. Prohibited behavior includes harassing or causing distress or inconvenience to any other user, transmitting obscene or offensive content or disrupting the normal flow of dialogue within this website."
+        },
+        {
+          "type": "heading",
+          "text": "3. Disclaimer"
+        },
+        {
+          "type": "paragraph",
+          "text": "To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website."
+        },
+        {
+          "type": "paragraph",
+          "text": "As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature."
+        }
+      ]
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "lastUpdated": "July 2026",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The information contained on acubeskills.in website (the \"Service\") is for general information purposes only."
+        },
+        {
+          "type": "paragraph",
+          "text": "A-Cube Institute of Skills assumes no responsibility for errors or omissions in the contents on the Service."
+        },
+        {
+          "type": "paragraph",
+          "text": "In no event shall A-Cube Institute of Skills be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service. A-Cube Institute of Skills reserves the right to make additions, deletions, or modification to the contents on the Service at any time without prior notice."
+        },
+        {
+          "type": "heading",
+          "text": "External Links Disclaimer"
+        },
+        {
+          "type": "paragraph",
+          "text": "acubeskills.in website may contain links to external websites that are not provided or maintained by or in any way affiliated with A-Cube Institute of Skills."
+        },
+        {
+          "type": "paragraph",
+          "text": "Please note that the A-Cube Institute of Skills does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites."
+        },
+        {
+          "type": "heading",
+          "text": "Professional Disclaimer"
+        },
+        {
+          "type": "paragraph",
+          "text": "The services information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals. We do not provide any kind of specific legal or HR compliance advice online."
+        }
+      ]
+    }
+  }
+}

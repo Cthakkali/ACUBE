@@ -3,8 +3,10 @@
 import { UserCheck, Users, Briefcase, UserCog, GraduationCap, UserPlus } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
+
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import data from "../data.json";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -14,56 +16,36 @@ export default function Services() {
 
   const servicesData = [
     {
-      id: "service-1",
-      title: <>Human Resouce<br />Supply</>,
+      id: data.services.servicesData[0].id,
+      title: <>{data.services.servicesData[0].titleLine1}<br />{data.services.servicesData[0].titleLine2}</>,
       icon: <UserCog className="w-10 h-10 lg:w-12 lg:h-12 text-primary-1" strokeWidth={1.5} />,
       navIcon: <UserCog className="w-5 h-5" strokeWidth={1.5} />,
-      desc: "We offer comprehensive workforce solutions, providing both skilled and unskilled manpower alongside flexible contract, temporary, and permanent staffing to ensure your business always has the exact talent it needs to succeed.",
-      items: [
-        { icon: <UserCog className="w-5 h-5" />, title: "Skilled Manpower Supply" },
-        { icon: <UserCog className="w-5 h-5" />, title: "Unskilled Manpower Supply" },
-        { icon: <UserCog className="w-5 h-5" />, title: "Temporary and Permanent Staffing" },
-        { icon: <UserCog className="w-5 h-5" />, title: "Contract Staffing Solutions" },
-      ]
+      desc: data.services.servicesData[0].desc,
+      items: data.services.servicesData[0].items.map((item) => ({ icon: <UserCog className="w-5 h-5" />, title: item }))
     },
     {
-      id: "service-2",
-      title: <>Corporate<br />Training</>,
+      id: data.services.servicesData[1].id,
+      title: <>{data.services.servicesData[1].titleLine1}<br />{data.services.servicesData[1].titleLine2}</>,
       icon: <GraduationCap className="w-10 h-10 lg:w-12 lg:h-12 text-primary-1" strokeWidth={1.5} />,
       navIcon: <GraduationCap className="w-5 h-5" strokeWidth={1.5} />,
-      desc: "Empower your workforce with our comprehensive training programs. We deliver industry-leading certifications, leadership coaching, and technical skills development tailored to your business goals.",
-      items: [
-        { icon: <GraduationCap className="w-5 h-5" />, title: "Leadership Development" },
-        { icon: <GraduationCap className="w-5 h-5" />, title: "Technical Skills Training" },
-        { icon: <GraduationCap className="w-5 h-5" />, title: "Soft Skills Workshops" },
-        { icon: <GraduationCap className="w-5 h-5" />, title: "Industry Certifications" },
-      ]
+      desc: data.services.servicesData[1].desc,
+      items: data.services.servicesData[1].items.map((item) => ({ icon: <GraduationCap className="w-5 h-5" />, title: item }))
     },
     {
-      id: "service-3",
-      title: <>Payroll<br />Management</>,
+      id: data.services.servicesData[2].id,
+      title: <>{data.services.servicesData[2].titleLine1}<br />{data.services.servicesData[2].titleLine2}</>,
       icon: <Briefcase className="w-10 h-10 lg:w-12 lg:h-12 text-primary-1" strokeWidth={1.5} />,
       navIcon: <Briefcase className="w-5 h-5" strokeWidth={1.5} />,
-      desc: "Streamline your HR operations with our comprehensive payroll management system. We handle everything from tax compliance and benefits administration to precise and timely salary disbursements.",
-      items: [
-        { icon: <Briefcase className="w-5 h-5" />, title: "Automated Payroll System" },
-        { icon: <Briefcase className="w-5 h-5" />, title: "Tax & Legal Compliance" },
-        { icon: <Briefcase className="w-5 h-5" />, title: "Benefits Administration" },
-        { icon: <Briefcase className="w-5 h-5" />, title: "Leave & Attendance Management" },
-      ]
+      desc: data.services.servicesData[2].desc,
+      items: data.services.servicesData[2].items.map((item) => ({ icon: <Briefcase className="w-5 h-5" />, title: item }))
     },
     {
-      id: "service-4",
-      title: <>Executive<br />Search</>,
+      id: data.services.servicesData[3].id,
+      title: <>{data.services.servicesData[3].titleLine1}<br />{data.services.servicesData[3].titleLine2}</>,
       icon: <UserPlus className="w-10 h-10 lg:w-12 lg:h-12 text-primary-1" strokeWidth={1.5} />,
       navIcon: <UserPlus className="w-5 h-5" strokeWidth={1.5} />,
-      desc: "Find the perfect leaders for your organization. Our executive search service utilizes an extensive global network to identify, evaluate, and recruit top-tier management and C-level professionals.",
-      items: [
-        { icon: <UserPlus className="w-5 h-5" />, title: "C-Level Recruitment" },
-        { icon: <UserPlus className="w-5 h-5" />, title: "Board Member Search" },
-        { icon: <UserPlus className="w-5 h-5" />, title: "Interim Executive Management" },
-        { icon: <UserPlus className="w-5 h-5" />, title: "Leadership Assessment" },
-      ]
+      desc: data.services.servicesData[3].desc,
+      items: data.services.servicesData[3].items.map((item) => ({ icon: <UserPlus className="w-5 h-5" />, title: item }))
     }
   ];
 
@@ -126,11 +108,11 @@ export default function Services() {
         {/* Sticky Left Panel */}
         <div className="w-full lg:w-3/12 shrink-0 relative mb-12 lg:mb-0 services-left">
           <div className="lg:sticky lg:top-24 bg-primary-1 text-white p-8 lg:p-14 rounded-[2.5rem] flex flex-col justify-center min-h-[350px] lg:min-h-[550px] z-10 shadow-2xl shadow-primary-1/40">
-            <h3 className="text-sm font-semibold tracking-wide mb-8">Our Services</h3>
+            <h3 className="text-sm font-semibold tracking-wide mb-8">{data.services.badge}</h3>
             <div>
               <h2 className="text-3xl font-bold mb-6">
-                Comprehensive<br />Solution for<br />
-                <span className="text-[#A0DAAD] font-semibold">Workforce</span><br />Development
+                {data.services.titlePart1}<br />{data.services.titlePart2}<br />
+                <span className="text-[#A0DAAD] font-semibold">{data.services.titleHighlight}</span><br />{data.services.titlePart3}
               </h2>
               <div className="w-12 h-0.5 bg-[#A0DAAD]"></div>
             </div>

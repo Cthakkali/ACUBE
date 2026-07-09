@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { X, ZoomIn, Camera } from "lucide-react";
+import data from "../data.json";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -14,17 +15,7 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const images = [
-    { src: "/hero.png", alt: "Team Meeting", span: "md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2" },
-    { src: "/hero-1.png", alt: "Training Session", span: "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
-    { src: "/hero-2.png", alt: "CSR Event", span: "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
-    { src: "/hero-4.png", alt: "Skill Development", span: "md:col-span-1 md:row-span-2 lg:col-span-1 lg:row-span-2" },
-    { src: "/0hero.png", alt: "Corporate Office", span: "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
-    { src: "/1hero.png", alt: "Manpower Deployment", span: "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
-    { src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop", alt: "Business Collaboration", span: "md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1" },
-    { src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop", alt: "Team Discussion", span: "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
-    { src: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop", alt: "Workshop", span: "md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1" },
-  ];
+  const images = data.gallery.images;
 
   useGSAP(() => {
     // Header Animations
@@ -78,15 +69,15 @@ export default function Gallery() {
             <div className="absolute top-0 left-0 w-full h-full -z-10 bg-linear-to-b from-primary-1/5 to-transparent pointer-events-none"></div>
             
             <div className="flex flex-col items-center text-center gallery-header">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary-1 mb-6 shadow-sm">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary-1 mb-6 shadow-sm mx-auto">
                 <Camera className="w-8 h-8" />
               </div>
-              <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Our Gallery</h3>
+              <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">{data.gallery.header.badge}</h3>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Moments of <span className="text-primary-1">Impact.</span>
+                {data.gallery.header.titlePart1} <span className="text-primary-1">{data.gallery.header.titleHighlight}</span>
               </h1>
-              <p className="text-gray-500 text-base max-w-2xl leading-relaxed">
-                A visual journey through our training sessions, CSR initiatives, and the milestones we've achieved in empowering the workforce.
+              <p className="text-gray-500 text-base max-w-2xl mx-auto leading-relaxed">
+                {data.gallery.header.description}
               </p>
             </div>
           </section>

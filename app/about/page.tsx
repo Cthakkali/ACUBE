@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Target, Compass, Award, ShieldCheck, Building2, Briefcase, Stamp, TrendingUp, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import data from "../data.json";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -77,15 +78,7 @@ export default function About() {
 
   }, { scope: containerRef });
 
-  const certifications = [
-    { title: "ISO 9001:2015 Certified" },
-    { title: "Certificate of Incorporation" },
-    { title: "GST Registration" },
-    { title: "MSME Registration" },
-    { title: "EPF Registration" },
-    { title: "ESIC Registration" },
-    { title: "Labour Registration" },
-  ];
+  const certifications = data.about.compliance.certifications.map((cert) => ({ title: cert }));
 
   return (
     <div className="flex flex-col min-h-screen bg-(--color-background) font-sans text-gray-900 w-full" ref={containerRef}>
@@ -103,25 +96,19 @@ export default function About() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 flex flex-col items-start z-10 hero-content">
               <div className="text-primary-1 text-[10px] font-bold px-3 py-1.5 border rounded-md mb-6 inline-flex items-center gap-2">
-                <Building2 className="w-4 h-4" /> Established 2021
+                <Building2 className="w-4 h-4" /> {data.about.hero.badge}
               </div>
               <h1 className="text-4xl md:text-5xl font-semibold text-black leading-[1.1] mb-6">
-                Empowering People Through <br />
-                <span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">Skills & Employment.</span>
+                {data.about.hero.titlePart1} <br />
+                <span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">{data.about.hero.titleHighlight}</span>
               </h1>
               
               <div className="w-12 h-1 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] mb-8"></div>
 
               <div className="text-gray-600 text-sm md:text-base mb-6 leading-relaxed flex flex-col gap-4">
-                <p>
-                  A-Cube Institute of Skills is a leading human resources supply and skill development solutions provider committed to empowering individuals and supporting organizations through quality manpower and workforce development services.
-                </p>
-                <p>
-                  With over 5 years of combined industry experience, we have established ourselves as a trusted partner for government departments, corporate organizations, CSR initiatives, and development projects across Tamil Nadu. We specialize in manpower supply, recruitment services, skill development, training implementation, and human resource consulting.
-                </p>
-                <p>
-                  Our commitment to quality, reliability, and client satisfaction has enabled us to build long-term relationships while contributing to employment generation and workforce development.
-                </p>
+                {data.about.hero.description.map((desc, idx) => (
+                  <p key={idx}>{desc}</p>
+                ))}
               </div>
             </div>
 
@@ -141,8 +128,8 @@ export default function About() {
                     <TrendingUp className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="text-xl font-bold text-gray-900">5+ Years</div>
-                    <div className="text-xs text-gray-500 font-medium">Industry Experience</div>
+                    <div className="text-xl font-bold text-gray-900">{data.about.hero.floatingBadge.title}</div>
+                    <div className="text-xs text-gray-500 font-medium">{data.about.hero.floatingBadge.subtitle}</div>
                   </div>
                 </div>
               </div>
@@ -161,9 +148,9 @@ export default function About() {
                 <Target className="w-8 h-8 text-primary-1 group-hover:text-white transition-colors duration-500" />
               </div>
               
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors duration-500">Our Vision</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors duration-500">{data.about.vision.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-500">
-                To be the preferred partner for human resources supply and skill development solutions, delivering exceptional value to our clients and creating sustainable livelihood opportunities for individuals.
+                {data.about.vision.description}
               </p>
             </div>
 
@@ -175,9 +162,9 @@ export default function About() {
                 <Compass className="w-8 h-8 text-primary-1 group-hover:text-white transition-colors duration-500" />
               </div>
               
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors duration-500">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors duration-500">{data.about.mission.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-500">
-                To provide high-quality human resources supply and skill development solutions that enhance our clients' productivity, competitiveness, and operational excellence while empowering youth and women through employability and livelihood initiatives.
+                {data.about.mission.description}
               </p>
             </div>
           </div>
@@ -192,28 +179,28 @@ export default function About() {
             {/* Leadership Image / Abstract visual */}
             <div className="w-full lg:w-5/12 flex justify-center leadership-content">
                <div className="relative w-full max-w-[400px] aspect-4/5 rounded-[2.5rem] bg-linear-to-br from-primary-1/20 to-primary-1/5 overflow-hidden border border-white/50 shadow-xl flex items-center justify-center group">
-                 <img 
-                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800" 
-                   alt="Managing Director" 
-                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                 />
-                 
-                 <div className="absolute inset-0 bg-linear-to-t from-primary-1/90 via-primary-1/20 to-transparent mix-blend-multiply"></div>
-                 <div className="absolute bottom-6 left-6 right-6">
-                    <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-sm">
-                      <p className="text-xs font-bold text-primary-1 uppercase tracking-wider mb-1">Managing Director</p>
-                      <h4 className="text-xl font-bold text-gray-900">ARUNVIGNESH P R</h4>
-                    </div>
-                 </div>
+                  <img 
+                    src={data.about.leadership.image} 
+                    alt={data.about.leadership.title} 
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  />
+                  
+                  <div className="absolute inset-0 bg-linear-to-t from-primary-1/90 via-primary-1/20 to-transparent mix-blend-multiply"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                     <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-sm">
+                       <p className="text-xs font-bold text-primary-1 uppercase tracking-wider mb-1">{data.about.leadership.title}</p>
+                       <h4 className="text-xl font-bold text-gray-900">{data.about.leadership.name}</h4>
+                     </div>
+                  </div>
                </div>
             </div>
 
             {/* Leadership Text */}
             <div className="w-full lg:w-7/12 leadership-content">
-              <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Leadership</h3>
+              <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">{data.about.leadership.badge}</h3>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Guiding Vision & <br />
-                <span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">Strategic Growth.</span>
+                {data.about.leadership.titlePart1} <br />
+                <span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">{data.about.leadership.titleHighlight}</span>
               </h2>
               <div className="w-12 h-1 bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] mb-8"></div>
               
@@ -224,7 +211,7 @@ export default function About() {
                    </svg>
                 </div>
                 <p className="text-gray-600 text-[15px] leading-relaxed relative z-10 font-medium italic">
-                  "At A-Cube Institute of Skills, our core philosophy is rooted in the belief that the right talent coupled with the right opportunities can transform businesses and communities alike. We are dedicated to providing strategic leadership, driving organizational growth, and ensuring successful project implementations through active stakeholder engagement."
+                  {data.about.leadership.quote}
                 </p>
               </div>
             </div>
@@ -234,12 +221,12 @@ export default function About() {
         {/* Certifications & Compliance */}
         <section className="w-full px-4 md:px-12 lg:px-24 py-16 bg-white cert-section border-t border-gray-50">
           <div className="flex flex-col items-center text-center mb-12">
-            <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Trust & Compliance</h3>
+            <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">{data.about.compliance.badge}</h3>
             <h2 className="text-3xl font-bold text-gray-900">
-              Certifications & <span className="text-primary-1">Registrations</span>
+              {data.about.compliance.title} <span className="text-primary-1">{data.about.compliance.titleHighlight}</span>
             </h2>
             <p className="text-gray-500 text-sm mt-4 max-w-xl">
-              We maintain all statutory and operational compliances required for effective, reliable service delivery.
+              {data.about.compliance.description}
             </p>
           </div>
 

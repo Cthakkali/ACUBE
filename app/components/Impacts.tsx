@@ -5,6 +5,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import data from "../data.json";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -44,33 +45,33 @@ export default function Impacts() {
   const stats = [
     {
       icon: <UsersRound className="w-6 h-6" strokeWidth={1.5} />,
-      number: "2000+",
-      label: <>Workers<br />Deployed</>,
+      number: data.impacts.stats[0].number,
+      label: <>{data.impacts.stats[0].labelLine1}<br />{data.impacts.stats[0].labelLine2}</>,
     },
     {
       icon: <FolderOpen className="w-6 h-6" strokeWidth={1.5} />,
-      number: "10+",
-      label: <>Industry<br />Served</>,
+      number: data.impacts.stats[1].number,
+      label: <>{data.impacts.stats[1].labelLine1}<br />{data.impacts.stats[1].labelLine2}</>,
     },
     {
       icon: <UsersRound className="w-6 h-6" strokeWidth={1.5} />,
-      number: "500+",
-      label: <>Active<br />Workforce</>,
+      number: data.impacts.stats[2].number,
+      label: <>{data.impacts.stats[2].labelLine1}<br />{data.impacts.stats[2].labelLine2}</>,
     },
     {
       icon: <Landmark className="w-6 h-6" strokeWidth={1.5} />,
-      number: "100+",
-      label: <>Company<br />Partnered</>,
+      number: data.impacts.stats[3].number,
+      label: <>{data.impacts.stats[3].labelLine1}<br />{data.impacts.stats[3].labelLine2}</>,
     },
     {
       icon: <Map className="w-6 h-6" strokeWidth={1.5} />,
-      number: "5+",
-      label: <>States<br />Served</>,
+      number: data.impacts.stats[4].number,
+      label: <>{data.impacts.stats[4].labelLine1}<br />{data.impacts.stats[4].labelLine2}</>,
     },
     {
       icon: <HeartHandshake className="w-6 h-6" strokeWidth={1.5} />,
-      number: "99%",
-      label: <>Deployment<br />Success rate</>,
+      number: data.impacts.stats[5].number,
+      label: <>{data.impacts.stats[5].labelLine1}<br />{data.impacts.stats[5].labelLine2}</>,
     },
   ];
 
@@ -79,10 +80,10 @@ export default function Impacts() {
       <div className="w-full bg-white rounded-4xl p-8 lg:px-12 py-12 flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 shadow-sm">
         {/* Left Content */}
         <div className="w-full lg:w-1/3 pt-8 impact-left">
-          <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">Impacts</h3>
-          <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">Numbers.</h2>
+          <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">{data.impacts.badge}</h3>
+          <h2 className="text-4xl font-bold bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent mb-6">{data.impacts.title}</h2>
           <p className="text-gray-600 text-sm max-w-xs leading-relaxed mb-2">
-            our impact in creating meaningful opportunities and driving sustainable change
+            {data.impacts.description}
           </p> {/* Divider Line */}
           <div className="w-12 h-1 mt-4 mb-2 bg-primary-gradient"></div>
         </div>

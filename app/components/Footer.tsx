@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowRight, Download } from "lucide-react";
+import data from "../data.json";
 
 export default function Footer() {
   return (
@@ -14,18 +15,17 @@ export default function Footer() {
         {/* Left CTA */}
         <div className="w-full lg:w-1/2 z-10 flex flex-col items-start">
           <h2 className="text-2xl  font-bold mb-2 leading-tight">
-            Need Reliable Manpower for your Business ?
+            {data.footer.cta.title}
           </h2>
           <p className="text-white text-sm mb-8 leading-relaxed max-w-lg font-medium">
-            Partner with A-Cube Institute of Skills for reliable manpower, recruitment,
-            HR consulting, and industry-focused skill development programs.
+            {data.footer.cta.description}
           </p>
           <div className="flex flex-wrap gap-4">
             <button className="bg-tertiary hover:bg-[#F57C00] transition-colors text-white font-bold px-4 py-3 rounded-2xl flex items-center gap-2">
-              Get in touch <ArrowRight className="w-4 h-4" />
+              {data.footer.cta.button1} <ArrowRight className="w-4 h-4" />
             </button>
             <button className="bg-transparent border border-white hover:bg-white hover:text-tertiary transition-colors text-white font-bold px-4 py-3 rounded-2xl flex items-center gap-2">
-              Download Profile <Download className="w-4 h-4" />
+              {data.footer.cta.button2} <Download className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -36,18 +36,19 @@ export default function Footer() {
             <div className="flex gap-4">
               <Phone className="w-6 h-6 shrink-0 text-white" />
               <div>
-                <h4 className="font-bold mb-1 text-sm">Contact Us</h4>
+                <h4 className="font-bold mb-1 text-sm">{data.footer.contact.title}</h4>
                 <div className="text-xs text-white leading-relaxed font-medium flex flex-col gap-1">
-                  <a href="tel:+919894751538" className="hover:text-primary-1 transition-colors">91 9894 751 538</a>
-                  <a href="tel:04216614336" className="hover:text-primary-1 transition-colors">0421 661 4336</a>
+                  {data.footer.contact.phones.map((phone, idx) => (
+                    <a key={idx} href={`tel:${phone.link}`} className="hover:text-primary-1 transition-colors">{phone.display}</a>
+                  ))}
                 </div>
               </div>
             </div>
             <div className="flex gap-4">
               <Mail className="w-6 h-6 shrink-0 text-white" />
               <div>
-                <h4 className="font-bold mb-1 text-sm">Enquiry</h4>
-                <a href="mailto:acubeskills@gmail.com" className="text-xs text-white hover:underline font-medium">acubeskills@gmail.com</a>
+                <h4 className="font-bold mb-1 text-sm">{data.footer.contact.emailTitle}</h4>
+                <a href={`mailto:${data.footer.contact.email}`} className="text-xs text-white hover:underline font-medium">{data.footer.contact.email}</a>
               </div>
             </div>
           </div>
@@ -58,22 +59,22 @@ export default function Footer() {
           <div className="flex-1 w-full flex gap-4">
             <MapPin className="w-6 h-6 shrink-0 text-white" />
             <div className="flex flex-col gap-6">
-              <h4 className="font-bold mb-1 text-sm">Office Location</h4>
+              <h4 className="font-bold mb-1 text-sm">{data.footer.office.title}</h4>
 
               <div>
-                <h5 className="font-bold text-[11px] text-white mb-1">Registered Office</h5>
+                <h5 className="font-bold text-[11px] text-white mb-1">{data.footer.office.registered.title}</h5>
                 <p className="text-[11px] text-white leading-relaxed">
-                  IInd Floor, Sibi's Nest, 042/14, Near Kannaki<br />
-                  Departmental Stores, Perundurai Main Road,<br />
-                  Thindal, Erode - 638012
+                  {data.footer.office.registered.addressLine1}<br />
+                  {data.footer.office.registered.addressLine2}<br />
+                  {data.footer.office.registered.addressLine3}
                 </p>
               </div>
 
               <div>
-                <h5 className="font-bold text-[11px] text-white mb-1">Head office</h5>
+                <h5 className="font-bold text-[11px] text-white mb-1">{data.footer.office.head.title}</h5>
                 <p className="text-[11px] text-white leading-relaxed">
-                  No:84, Sai Best Complex, Second Floor, Kuppana<br />
-                  Chetty Street, Palladam road, Tiruppur- 641604
+                  {data.footer.office.head.addressLine1}<br />
+                  {data.footer.office.head.addressLine2}
                 </p>
               </div>
             </div>
@@ -87,9 +88,7 @@ export default function Footer() {
         <div className="w-full lg:w-2/5 flex flex-col items-start justify-center max-w-sm">
           <Image src="/logo-footer.svg" alt="A-Cube Logo White" width={220} height={60} className="mb-4 w-auto h-14" />
           <p className="text-[11px] text-white leading-relaxed pr-8">
-            A-Cube Institute of Skills is a leading human resource supply and skill
-            development solutions provider committed to empowering individuals
-            and supporting organization.
+            {data.footer.companyInfo}
           </p>
         </div>
 
@@ -98,13 +97,11 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="flex flex-col">
-          <h4 className="font-bold text-sm mb-5">Quick Links</h4>
+          <h4 className="font-bold text-sm mb-5">{data.footer.quickLinks.title}</h4>
           <ul className="flex flex-col gap-3 text-xs text-white/80 font-medium">
-            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li><Link href="/about" className="hover:text-white transition-colors">About us</Link></li>
-            <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-            <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link></li>
-            <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+            {data.footer.quickLinks.links.map((link, idx) => (
+              <li key={idx}><Link href={link.href} className="hover:text-white transition-colors">{link.label}</Link></li>
+            ))}
           </ul>
         </div>
 
@@ -113,12 +110,11 @@ export default function Footer() {
 
         {/* Our Services */}
         <div className="flex flex-col">
-          <h4 className="font-bold text-sm mb-5">Our Services</h4>
+          <h4 className="font-bold text-sm mb-5">{data.footer.servicesLinks.title}</h4>
           <ul className="flex flex-col gap-3 text-xs text-white/80 font-medium">
-            <li><Link href="#" className="hover:text-white transition-colors">Human Resource Supply</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Recruitment Service</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Skill development & Training</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">HR Consulting</Link></li>
+            {data.footer.servicesLinks.links.map((link, idx) => (
+              <li key={idx}><Link href={link.href} className="hover:text-white transition-colors">{link.label}</Link></li>
+            ))}
           </ul>
         </div>
 
@@ -127,14 +123,11 @@ export default function Footer() {
 
         {/* Certifications */}
         <div className="flex flex-col">
-          <h4 className="font-bold text-sm mb-5">Certifications</h4>
+          <h4 className="font-bold text-sm mb-5">{data.footer.certifications.title}</h4>
           <ul className="flex flex-col gap-3 text-xs text-white/80 font-medium">
-            <li>ISO 9001:2015 certified</li>
-            <li>Certificate of Incorporation</li>
-            <li>GST Registeration</li>
-            <li>MSME Registeration</li>
-            <li>EPF & ESIC Registeration</li>
-            <li>Labour Registeration</li>
+            {data.footer.certifications.items.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
           </ul>
         </div>
       </section>
@@ -142,12 +135,12 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="w-full bg-[#003431] flex flex-col md:flex-row justify-between items-center px-4 md:px-12 lg:px-24 py-4 text-xs text-white/60 gap-4 text-center md:text-left">
         <div>
-          &copy; 2026 A-Cube Institute of Skills | Developed by <span className="font-medium"><a href="https://jadbery.com" className="text-white hover:underline">Jadbery Digital</a></span>
+          {data.footer.bottomBar.copyright} <span className="font-medium"><a href={data.footer.bottomBar.developerLink} className="text-white hover:underline">{data.footer.bottomBar.developer}</a></span>
         </div>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 font-medium">
-          <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-          <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
+          {data.footer.bottomBar.links.map((link, idx) => (
+            <Link key={idx} href={link.href} className="hover:text-white transition-colors">{link.label}</Link>
+          ))}
         </div>
       </div>
     </footer>

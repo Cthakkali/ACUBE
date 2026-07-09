@@ -7,9 +7,11 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
+import data from "./data.json";
+
 export const metadata: Metadata = {
-  title: "A-Cube Institute of Skills",
-  description: "Reliable Manpower for Every Industry.",
+  title: data.metadata.title,
+  description: data.metadata.description,
 };
 
 export default function RootLayout({

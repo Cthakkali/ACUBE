@@ -5,6 +5,7 @@ import { ArrowRight, Users, Clock, Building, Award, UserRound, UsersRound, Calen
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import data from "../data.json";
 
 gsap.registerPlugin(useGSAP);
 
@@ -48,32 +49,32 @@ export default function Hero() {
       {/* Left Content */}
       <div className="w-full lg:w-5/12 flex flex-col items-start z-10 hero-left">
         <div className="text-primary-1 text-[10px] font-bold px-3 py-1.5 border rounded-md mb-6">
-          Empowering People
+          {data.hero.badge}
         </div>
 
         <h1 className="text-4xl md:text-5xl font-semibold text-black leading-[1.1] mb-6">
-          Reliable Manpower <br />for Every <span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">Industry.</span>
+          {data.hero.titlePart1} <br />{data.hero.titlePart2} <span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">{data.hero.titleHighlight}</span>
         </h1>
 
         <p className="text-xs font-bold text-gray-800 mb-6 flex items-center gap-3">
-          <span>Skilled</span> <span className="w-1 h-1 bg-primary-1 rounded-full"></span>
-          <span>Unskilled</span> <span className="w-1 h-1 bg-primary-1 rounded-full"></span>
-          <span>Contract</span> <span className="w-1 h-1 bg-primary-1 rounded-full"></span>
-          <span>Permanent</span>
+          <span>{data.hero.tags[0]}</span> <span className="w-1 h-1 bg-primary-1 rounded-full"></span>
+          <span>{data.hero.tags[1]}</span> <span className="w-1 h-1 bg-primary-1 rounded-full"></span>
+          <span>{data.hero.tags[2]}</span> <span className="w-1 h-1 bg-primary-1 rounded-full"></span>
+          <span>{data.hero.tags[3]}</span>
         </p>
 
         <p className="text-gray-600 text-xs md:text-base mb-10 max-w-lg leading-relaxed">
-          A-Cube Institute of Skills helps businesses build dependable teams through skilled, unskilled, contract, and permanent manpower solutions. We connect organizations with qualified professionals who are ready to contribute from day one, ensuring operational continuity and business growth.
+          {data.hero.description}
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mb-10 lg:mb-20">
           <button className="relative overflow-hidden bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] text-white font-bold text-sm px-5 rounded-md flex items-center gap-2 group h-[44px]">
             <span className="absolute inset-0 bg-linear-to-r from-[#A0DAAD] to-[#2D9F90] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            <span className="relative z-10 flex items-center gap-2">Explore Services <ArrowRight className="w-5 h-5" /></span>
+            <span className="relative z-10 flex items-center gap-2">{data.hero.button1} <ArrowRight className="w-5 h-5" /></span>
           </button>
           <button className="relative p-px rounded-md border-2 border-[#A0DAAD] group h-[44px] flex items-stretch">
             <span className="flex items-center justify-center bg-background text-primary-1 font-bold text-sm px-5 rounded-[5px] transition-colors duration-300 w-full">
-              Contact Us
+              {data.hero.button2}
             </span>
           </button>
         </div>
@@ -91,7 +92,7 @@ export default function Hero() {
             <div
               className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
               style={{
-                backgroundImage: 'url(/hero.png)',
+                backgroundImage: `url(${data.hero.images.main})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -107,7 +108,7 @@ export default function Hero() {
               <div
                 className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
                 style={{
-                  backgroundImage: 'url(/hero-2.png)',
+                  backgroundImage: `url(${data.hero.images.stack1})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -120,7 +121,7 @@ export default function Hero() {
               <div
                 className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
                 style={{
-                  backgroundImage: 'url(/hero-1.png)',
+                  backgroundImage: `url(${data.hero.images.stack2})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -133,7 +134,7 @@ export default function Hero() {
               <div
                 className="absolute top-0 left-[-15%] w-[130%] h-full skew-x-10"
                 style={{
-                  backgroundImage: 'url(/hero-4.png)',
+                  backgroundImage: `url(${data.hero.images.stack3})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -148,29 +149,29 @@ export default function Hero() {
         <div className="flex items-center gap-2 border-r border-gray-100 last:border-0 pr-2">
           <UsersRound className="w-8 h-8 text-primary-1" strokeWidth={1.5} />
           <div>
-            <div className="font-bold text-primary-1 text-sm">2000+</div>
-            <div className="text-[10px] text-gray-500 font-medium tracking-wide">Candidates Trained</div>
+            <div className="font-bold text-primary-1 text-sm">{data.hero.stats[0].number}</div>
+            <div className="text-[10px] text-gray-500 font-medium tracking-wide">{data.hero.stats[0].label1}</div>
           </div>
         </div>
         <div className="flex items-center gap-2 border-r border-gray-100 last:border-0 pr-2">
           <CalendarDays className="w-8 h-8 text-primary-1" strokeWidth={1.5} />
           <div>
-            <div className="font-bold text-primary-1 text-sm">5 Years+</div>
-            <div className="text-[10px] text-gray-500 font-medium tracking-wide">Experience</div>
+            <div className="font-bold text-primary-1 text-sm">{data.hero.stats[1].number}</div>
+            <div className="text-[10px] text-gray-500 font-medium tracking-wide">{data.hero.stats[1].label1}</div>
           </div>
         </div>
         <div className="flex items-center gap-2 border-r border-gray-100 last:border-0 pr-2">
           <ChartNoAxesCombined className="w-8 h-8 text-primary-1" strokeWidth={1.5} />
           <div>
-            <div className="font-bold text-primary-1 text-sm">Government</div>
-            <div className="text-[10px] text-gray-500 font-medium tracking-wide">& CSR Projects</div>
+            <div className="font-bold text-primary-1 text-sm">{data.hero.stats[2].number}</div>
+            <div className="text-[10px] text-gray-500 font-medium tracking-wide">{data.hero.stats[2].label1}</div>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <BadgeCheck className="w-8 h-8 text-primary-1" strokeWidth={1.5} />
           <div>
-            <div className="font-bold text-primary-1 text-sm ">ISO</div>
-            <div className="text-[10px] text-gray-500 font-medium tracking-wide">9001:2015</div>
+            <div className="font-bold text-primary-1 text-sm ">{data.hero.stats[3].number}</div>
+            <div className="text-[10px] text-gray-500 font-medium tracking-wide">{data.hero.stats[3].label1}</div>
           </div>
         </div>
       </div>

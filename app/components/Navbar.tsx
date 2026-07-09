@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
+import data from "../data.json";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,21 +34,18 @@ export default function Navbar() {
       </div>
 
       <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
-        <Link href="/" className={pathname === "/" ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>Home</Link>
-        <Link href="/about" className={pathname === "/about" ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>About Us</Link>
-        <Link href="/#services" className="hover:text-primary-1 transition-colors">Services</Link>
-        <Link href="/#testimonial" className="hover:text-primary-1 transition-colors">Testimonials</Link>
-        <Link href="/gallery" className={pathname === "/gallery" ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>Gallery</Link>
-        <Link href="/contact" className={pathname === "/contact" ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>Contact</Link>
+        {data.navbar.links.map((link, idx) => (
+          <Link key={idx} href={link.href} className={pathname === link.href ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>{link.label}</Link>
+        ))}
       </div>
 
       <div className="flex items-center gap-3">
-        <a href="tel:+919999999999" className="w-10 h-10 rounded-full border md:border-2 border-primary-1 flex items-center justify-center text-primary-1 shrink-0 hover:bg-primary-1 hover:text-white transition-colors">
+        <a href={`tel:${data.navbar.phoneLink}`} className="w-10 h-10 rounded-full border md:border-2 border-primary-1 flex items-center justify-center text-primary-1 shrink-0 hover:bg-primary-1 hover:text-white transition-colors">
           <Phone className="w-5 h-5" />
         </a>
         <div className="hidden sm:flex flex-col mr-2 md:mr-0">
-          <span className="font-bold text-black leading-none text-sm">+91 9999 999 999</span>
-          <span className="text-[10px] text-gray-500">Mon-Sat : 09 00AM - 04 00 PM</span>
+          <span className="font-bold text-black leading-none text-sm">{data.navbar.phone}</span>
+          <span className="text-[10px] text-gray-500">{data.navbar.timings}</span>
         </div>
         {/* Mobile Menu Toggle */}
         <button
@@ -62,12 +60,9 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl md:hidden flex flex-col p-6 gap-6 z-40 animate-in slide-in-from-top-2 duration-200">
-          <Link href="/" className={pathname === "/" ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-          <Link href="/about" className={pathname === "/about" ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-          <Link href="/#services" className="font-semibold text-gray-700 hover:text-primary-1 text-lg" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-          <Link href="/#testimonial" className="font-semibold text-gray-700 hover:text-primary-1 text-lg" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</Link>
-          <Link href="/gallery" className={pathname === "/gallery" ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
-          <Link href="/contact" className={pathname === "/contact" ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+          {data.navbar.links.map((link, idx) => (
+            <Link key={idx} href={link.href} className={pathname === link.href ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>{link.label}</Link>
+          ))}
         </div>
       )}
     </nav>
