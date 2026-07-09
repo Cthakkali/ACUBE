@@ -62,16 +62,16 @@ export default function Footer() {
               <h4 className="font-bold mb-1 text-sm">{data.footer.office.title}</h4>
 
               <div>
-                <h5 className="font-bold text-[11px] text-white mb-1">{data.company.offices.registered.title}</h5>
+                <h5 className="font-bold text-[11px] text-white mb-1">{data.company.offices.head.title}</h5>
                 <p className="text-[11px] text-white leading-relaxed whitespace-pre-line">
-                  {data.company.offices.registered.addressLines.join('\n')}
+                  {data.company.offices.head.addressLines.join('\n')}
                 </p>
               </div>
 
               <div>
-                <h5 className="font-bold text-[11px] text-white mb-1">{data.company.offices.head.title}</h5>
+                <h5 className="font-bold text-[11px] text-white mb-1">{data.company.offices.registered.title}</h5>
                 <p className="text-[11px] text-white leading-relaxed whitespace-pre-line">
-                  {data.company.offices.head.addressLines.join('\n')}
+                  {data.company.offices.registered.addressLines.join('\n')}
                 </p>
               </div>
             </div>
