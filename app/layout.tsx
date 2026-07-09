@@ -9,7 +9,8 @@ const dmSans = DM_Sans({
 
 import data from "./data.json";
 
-const siteUrl = "https://www.acubeskills.in";
+// const siteUrl = "https://www.acubeskills.in";
+const siteUrl = "https://acube-kappa.vercel.app";
 const ogImage = `${siteUrl}/og-image.jpg`;
 
 export const metadata: Metadata = {
@@ -137,7 +138,6 @@ const organizationSchema = {
       },
       openingHours: "Mo-Sa 09:00-16:00",
       priceRange: "$$",
-      servesCuisine: undefined,
     },
   ],
 };
