@@ -50,12 +50,12 @@
     ]
   },
   "hero": {
-    "badge": "Empowering People",
+    "badge": "Empowering People Through Skills",
     "titlePart1": "Reliable Manpower ",
     "titlePart2": "for Every ",
     "titleHighlight": "Industry.",
     "tags": ["Skilled", "Unskilled", "Contract", "Permanent"],
-    "description": "A-Cube Institute of Skills helps businesses build dependable teams through skilled, unskilled, contract, and permanent manpower solutions. We connect organizations with qualified professionals who are ready to contribute from day one, ensuring operational continuity and business growth.",
+    "description": "A-Cube Institute of Skills is a leading human resources supply and skill development solutions provider. We connect government departments, corporates, and CSR-funded projects with qualified professionals — ensuring operational continuity and business growth across Tamil Nadu and beyond.",
     "button1": { "label": "Explore Services", "href": "/#services" },
     "button2": { "label": "Contact Us", "href": "/contact" },
     "stats": [
@@ -93,50 +93,50 @@
     "servicesData": [
       {
         "id": "service-1",
-        "titleLine1": "Human Resouce",
+        "titleLine1": "Human Resource",
         "titleLine2": "Supply",
-        "desc": "We offer comprehensive workforce solutions, providing both skilled and unskilled manpower alongside flexible contract, temporary, and permanent staffing to ensure your business always has the exact talent it needs to succeed.",
+        "desc": "We provide skilled and unskilled manpower supported by a robust recruitment, screening, deployment, and monitoring process — ensuring client satisfaction and workforce reliability across industries.",
         "items": [
           "Skilled Manpower Supply",
           "Unskilled Manpower Supply",
-          "Temporary and Permanent Staffing",
-          "Contract Staffing Solutions"
+          "Contract Staffing Solutions",
+          "Temporary and Permanent Staffing"
         ]
       },
       {
         "id": "service-2",
-        "titleLine1": "Corporate",
-        "titleLine2": "Training",
-        "desc": "Empower your workforce with our comprehensive training programs. We deliver industry-leading certifications, leadership coaching, and technical skills development tailored to your business goals.",
+        "titleLine1": "Recruitment",
+        "titleLine2": "Services",
+        "desc": "From sourcing to placement, we manage the complete recruitment lifecycle — connecting organizations with the right candidates quickly and efficiently.",
         "items": [
-          "Leadership Development",
-          "Technical Skills Training",
-          "Soft Skills Workshops",
-          "Industry Certifications"
+          "End-to-End Recruitment",
+          "Candidate Sourcing and Screening",
+          "Workforce Deployment",
+          "Recruitment Process Management"
         ]
       },
       {
         "id": "service-3",
-        "titleLine1": "Payroll",
-        "titleLine2": "Management",
-        "desc": "Streamline your HR operations with our comprehensive payroll management system. We handle everything from tax compliance and benefits administration to precise and timely salary disbursements.",
+        "titleLine1": "Skill Development",
+        "titleLine2": "& Training",
+        "desc": "As an official training partner of AMHSSC, we deliver vocational, corporate, and industry-specific training programs that enhance employability and create sustainable livelihoods.",
         "items": [
-          "Automated Payroll System",
-          "Tax & Legal Compliance",
-          "Benefits Administration",
-          "Leave & Attendance Management"
+          "Vocational Skill Training",
+          "Industry-Specific Training Programs",
+          "Corporate Training Solutions",
+          "Employability Enhancement Programs"
         ]
       },
       {
         "id": "service-4",
-        "titleLine1": "Executive",
-        "titleLine2": "Search",
-        "desc": "Find the perfect leaders for your organization. Our executive search service utilizes an extensive global network to identify, evaluate, and recruit top-tier management and C-level professionals.",
+        "titleLine1": "HR",
+        "titleLine2": "Consulting",
+        "desc": "We offer strategic HR advisory services to help organizations optimize their workforce, improve talent acquisition, and drive organizational development.",
         "items": [
-          "C-Level Recruitment",
-          "Board Member Search",
-          "Interim Executive Management",
-          "Leadership Assessment"
+          "Human Resource Advisory Services",
+          "Workforce Planning",
+          "Talent Acquisition Support",
+          "Organizational Development Assistance"
         ]
       }
     ]
@@ -169,8 +169,8 @@
   },
   "footer": {
     "cta": {
-      "title": "Need Reliable Manpower for your Business ?",
-      "description": "Partner with A-Cube Institute of Skills for reliable manpower, recruitment, HR consulting, and industry-focused skill development programs.",
+      "title": "Need Reliable Manpower for your Business?",
+      "description": "Partner with A-Cube Institute of Skills for reliable manpower supply, end-to-end recruitment, HR consulting, and industry-focused skill development programs across Tamil Nadu and Karnataka.",
       "button1": { "label": "Get in touch", "href": "/contact" },
       "button2": { "label": "Download Profile", "href": "/profile.pdf" }
     },
@@ -181,7 +181,7 @@
     "office": {
       "title": "Office Location"
     },
-    "companyInfo": "A-Cube Institute of Skills is a leading human resource supply and skill development solutions provider committed to empowering individuals and supporting organization.",
+    "companyInfo": "A-Cube Institute of Skills, incorporated in 2021, is a leading human resources supply and skill development solutions provider committed to empowering individuals and supporting organizations through quality manpower and workforce development services.",
     "quickLinks": {
       "title": "Quick Links",
       "links": [
@@ -221,9 +221,9 @@
       "titlePart1": "Empowering People Through ",
       "titleHighlight": "Skills & Employment.",
       "description": [
-        "A-Cube Institute of Skills is a leading human resources supply and skill development solutions provider committed to empowering individuals and supporting organizations through quality manpower and workforce development services.",
-        "With over 5 years of combined industry experience, we have established ourselves as a trusted partner for government departments, corporate organizations, CSR initiatives, and development projects across Tamil Nadu. We specialize in manpower supply, recruitment services, skill development, training implementation, and human resource consulting.",
-        "Our commitment to quality, reliability, and client satisfaction has enabled us to build long-term relationships while contributing to employment generation and workforce development."
+        "A-Cube Institute of Skills, incorporated in 2021, is a leading human resources supply and skill development solutions provider committed to empowering individuals and supporting organizations through quality manpower and workforce development services.",
+        "With over 5 years of combined industry experience, we have established ourselves as a trusted partner for government departments, corporate organizations, CSR initiatives, and development projects across Tamil Nadu and Karnataka. We specialize in manpower supply, recruitment services, skill development, training implementation, and human resource consulting.",
+        "Our commitment to quality, reliability, and client satisfaction has enabled us to build long-term relationships with various organizations while contributing to employment generation and workforce development."
       ],
       "floatingBadge": {
         "title": "5+ Years",
@@ -243,9 +243,10 @@
       "badge": "Leadership",
       "titlePart1": "Guiding Vision & ",
       "titleHighlight": "Strategic Growth.",
-      "quote": "\"At A-Cube Institute of Skills, our core philosophy is rooted in the belief that the right talent coupled with the right opportunities can transform businesses and communities alike. We are dedicated to providing strategic leadership, driving organizational growth, and ensuring successful project implementations through active stakeholder engagement.\"",
+      "quote": "\"Empowering People Through Skills, Employment, and Workforce Excellence. At A-Cube Institute of Skills, we are dedicated to providing strategic leadership, driving organizational growth, and ensuring successful project implementations through active stakeholder engagement.\"",
       "name": "ARUNVIGNESH P R",
       "title": "Managing Director",
+      "bio": "Provides strategic leadership and oversees organizational growth, project implementation, stakeholder engagement, and business development initiatives.",
       "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800"
     },
     "compliance": {
