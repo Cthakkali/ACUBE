@@ -2,6 +2,7 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Image from "next/image";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -178,11 +179,13 @@ export default function About() {
             {/* Leadership Image */}
             <div className="w-full lg:w-5/12 flex justify-center leadership-content">
               <div className="relative w-full max-w-[400px] aspect-4/5 rounded-[2.5rem] bg-linear-to-br from-primary-1/20 to-primary-1/5 overflow-hidden border border-white/50 shadow-xl flex items-center justify-center group">
-                <img
-                  src={data.about.leadership.image}
-                  alt={data.about.leadership.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
+                  <Image
+                    src={data.about.leadership.image}
+                    alt={`${data.about.leadership.name} — ${data.about.leadership.title} at A-Cube Institute of Skills`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
 
                 <div className="absolute inset-0 bg-linear-to-t from-primary-1/90 via-primary-1/20 to-transparent mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 right-6">
