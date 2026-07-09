@@ -74,7 +74,7 @@ export default function Gallery() {
               </div>
               <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">{data.gallery.header.badge}</h3>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                {data.gallery.header.titlePart1} <span className="text-primary-1">{data.gallery.header.titleHighlight}</span>
+                {data.gallery.header.titlePart1} <span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">{data.gallery.header.titleHighlight}</span>
               </h1>
               <p className="text-gray-500 text-base max-w-2xl mx-auto leading-relaxed">
                 {data.gallery.header.description}

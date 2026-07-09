@@ -88,8 +88,8 @@ export default function About() {
         <section className="relative w-full px-4 md:px-12 lg:px-24 pt-16 lg:pt-24 pb-16 overflow-hidden">
           {/* Background Decorative Elements */}
           <div className="absolute top-0 right-0 -z-10 w-full h-full overflow-hidden opacity-30">
-             <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary-1/10 blur-3xl"></div>
-             <div className="absolute bottom-[10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[#A0DAAD]/20 blur-3xl"></div>
+            <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary-1/10 blur-3xl"></div>
+            <div className="absolute bottom-[10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[#A0DAAD]/20 blur-3xl"></div>
           </div>
 
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -171,27 +171,27 @@ export default function About() {
 
         {/* Leadership Section */}
         <section className="w-full px-4 md:px-12 lg:px-24 py-16 lg:py-24 bg-[#24837D]/5 relative leadership-section overflow-hidden">
-           {/* Background shape */}
-           <div className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full bg-primary-1/5 blur-3xl pointer-events-none"></div>
+          {/* Background shape */}
+          <div className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full bg-primary-1/5 blur-3xl pointer-events-none"></div>
 
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             {/* Leadership Image */}
             <div className="w-full lg:w-5/12 flex justify-center leadership-content">
-               <div className="relative w-full max-w-[400px] aspect-4/5 rounded-[2.5rem] bg-linear-to-br from-primary-1/20 to-primary-1/5 overflow-hidden border border-white/50 shadow-xl flex items-center justify-center group">
-                  <img
-                    src={data.about.leadership.image}
-                    alt={data.about.leadership.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+              <div className="relative w-full max-w-[400px] aspect-4/5 rounded-[2.5rem] bg-linear-to-br from-primary-1/20 to-primary-1/5 overflow-hidden border border-white/50 shadow-xl flex items-center justify-center group">
+                <img
+                  src={data.about.leadership.image}
+                  alt={data.about.leadership.title}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
 
-                  <div className="absolute inset-0 bg-linear-to-t from-primary-1/90 via-primary-1/20 to-transparent mix-blend-multiply"></div>
-                  <div className="absolute bottom-6 left-6 right-6">
-                     <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-sm">
-                       <p className="text-xs font-bold text-primary-1 uppercase tracking-wider mb-1">{data.about.leadership.title}</p>
-                       <h4 className="text-xl font-bold text-gray-900">{data.about.leadership.name}</h4>
-                     </div>
+                <div className="absolute inset-0 bg-linear-to-t from-primary-1/90 via-primary-1/20 to-transparent mix-blend-multiply"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-sm">
+                    <p className="text-xs font-bold text-primary-1 uppercase tracking-wider mb-1">{data.about.leadership.title}</p>
+                    <h4 className="text-xl font-bold text-gray-900">{data.about.leadership.name}</h4>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
 
             {/* Leadership Text */}
@@ -205,9 +205,9 @@ export default function About() {
 
               <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-sm border border-gray-100 relative">
                 <div className="absolute -top-6 -left-6 text-primary-1/10">
-                   <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/>
-                   </svg>
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" />
+                  </svg>
                 </div>
                 <p className="text-gray-600 text-[15px] leading-relaxed relative z-10 font-medium italic">
                   {data.about.leadership.quote}

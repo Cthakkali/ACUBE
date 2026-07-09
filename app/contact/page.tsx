@@ -106,7 +106,7 @@ export default function Contact() {
             </div>
             <h3 className="text-primary-1 font-bold text-sm tracking-widest uppercase mb-2">{data.contact.header.badge}</h3>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {data.contact.header.titlePart1}<span className="text-primary-1">{data.contact.header.titleHighlight}</span>
+              {data.contact.header.titlePart1}<span className="bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] bg-clip-text text-transparent">{data.contact.header.titleHighlight}</span>
             </h1>
             <p className="text-gray-500 text-base max-w-2xl leading-relaxed">
               {data.contact.header.description}
