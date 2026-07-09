@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} h-full antialiased scroll-smooth`}>
+    <html lang="en" className={`${dmSans.variable} h-full antialiased scroll-smooth`} data-scroll-behavior="smooth">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

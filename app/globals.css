@@ -31,5 +31,11 @@ body {
 }
 
 .bg-cta-gradient {
-  background: linear-gradient(90deg, #2D9F90 0%, #2D9F90 60%, #6cc680 100%);
+  background: linear-gradient(180deg, #2D9F90 0%, #2D9F90 60%, #6cc680 100%);
+}
+
+@media (min-width: 1024px) {
+  .bg-cta-gradient {
+    background: linear-gradient(90deg, #2D9F90 0%, #2D9F90 60%, #6cc680 100%);
+  }
 }

@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="w-full flex items-center justify-between px-4 py-3 md:px-12 lg:px-24 sticky top-0 z-50 border-b border-white/40">
@@ -31,12 +33,12 @@ export default function Navbar() {
       </div>
 
       <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
-        <Link href="/" className="text-primary-1 border-b-2 border-primary-1 pb-1">Home</Link>
-        <Link href="/about" className="hover:text-primary-1 transition-colors">About Us</Link>
-        <Link href="#services" className="hover:text-primary-1 transition-colors">Services</Link>
-        <Link href="#testimonial" className="hover:text-primary-1 transition-colors">Testimonials</Link>
-        <Link href="/gallery" className="hover:text-primary-1 transition-colors">Gallery</Link>
-        <Link href="/contact" className="hover:text-primary-1 transition-colors">Contact</Link>
+        <Link href="/" className={pathname === "/" ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>Home</Link>
+        <Link href="/about" className={pathname === "/about" ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>About Us</Link>
+        <Link href="/#services" className="hover:text-primary-1 transition-colors">Services</Link>
+        <Link href="/#testimonial" className="hover:text-primary-1 transition-colors">Testimonials</Link>
+        <Link href="/gallery" className={pathname === "/gallery" ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>Gallery</Link>
+        <Link href="/contact" className={pathname === "/contact" ? "text-primary-1 border-b-2 border-primary-1 pb-1" : "hover:text-primary-1 transition-colors"}>Contact</Link>
       </div>
 
       <div className="flex items-center gap-3">
@@ -60,11 +62,12 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl md:hidden flex flex-col p-6 gap-6 z-40 animate-in slide-in-from-top-2 duration-200">
-          <Link href="/" className="text-primary-1 font-semibold text-lg" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-          <Link href="/about" className="font-semibold text-gray-700 hover:text-primary-1 text-lg" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-          <Link href="#services" className="font-semibold text-gray-700 hover:text-primary-1 text-lg" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-          <Link href="#projects" className="font-semibold text-gray-700 hover:text-primary-1 text-lg" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
-          <Link href="/gallery" className="font-semibold text-gray-700 hover:text-primary-1 text-lg" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
+          <Link href="/" className={pathname === "/" ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+          <Link href="/about" className={pathname === "/about" ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+          <Link href="/#services" className="font-semibold text-gray-700 hover:text-primary-1 text-lg" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+          <Link href="/#testimonial" className="font-semibold text-gray-700 hover:text-primary-1 text-lg" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</Link>
+          <Link href="/gallery" className={pathname === "/gallery" ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
+          <Link href="/contact" className={pathname === "/contact" ? "text-primary-1 font-semibold text-lg" : "font-semibold text-gray-700 hover:text-primary-1 text-lg"} onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </div>
       )}
     </nav>
