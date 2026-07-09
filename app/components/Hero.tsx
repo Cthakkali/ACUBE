@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Users, Clock, Building, Award, UserRound, UsersRound, Calendar, CalendarDays, ChartNoAxesColumn, ChartNoAxesCombined, BadgeCheck } from "lucide-react";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -68,15 +69,15 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mb-10 lg:mb-20">
-          <button className="relative overflow-hidden bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] text-white font-bold text-sm px-5 rounded-md flex items-center gap-2 group h-[44px]">
+          <Link href={data.hero.button1.href} className="relative overflow-hidden bg-linear-to-r from-[#2D9F90] to-[#A0DAAD] text-white font-bold text-sm px-5 rounded-md flex items-center gap-2 group h-[44px]">
             <span className="absolute inset-0 bg-linear-to-r from-[#A0DAAD] to-[#2D9F90] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            <span className="relative z-10 flex items-center gap-2">{data.hero.button1} <ArrowRight className="w-5 h-5" /></span>
-          </button>
-          <button className="relative p-px rounded-md border-2 border-[#A0DAAD] group h-[44px] flex items-stretch">
-            <span className="flex items-center justify-center bg-background text-primary-1 font-bold text-sm px-5 rounded-[5px] transition-colors duration-300 w-full">
-              {data.hero.button2}
+            <span className="relative z-10 flex items-center gap-2">{data.hero.button1.label} <ArrowRight className="w-5 h-5" /></span>
+          </Link>
+          <Link href={data.hero.button2.href} className="relative p-px rounded-md border-2 border-[#A0DAAD] group h-[44px] flex items-stretch">
+            <span className="flex items-center justify-center bg-background text-primary-1 font-bold text-sm px-5 rounded-[5px] transition-colors duration-300 w-full hover:bg-primary-1 hover:text-white">
+              {data.hero.button2.label}
             </span>
-          </button>
+          </Link>
         </div>
 
       </div>

@@ -40,11 +40,11 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-3">
-        <a href={`tel:${data.navbar.phoneLink}`} className="w-10 h-10 rounded-full border md:border-2 border-primary-1 flex items-center justify-center text-primary-1 shrink-0 hover:bg-primary-1 hover:text-white transition-colors">
+        <a href={`tel:${data.company.phones[0].link}`} className="w-10 h-10 rounded-full border md:border-2 border-primary-1 flex items-center justify-center text-primary-1 shrink-0 hover:bg-primary-1 hover:text-white transition-colors">
           <Phone className="w-5 h-5" />
         </a>
         <div className="hidden sm:flex flex-col mr-2 md:mr-0">
-          <span className="font-bold text-black leading-none text-sm">{data.navbar.phone}</span>
+          <span className="font-bold text-black leading-none text-sm">{data.company.phones[0].display}</span>
           <span className="text-[10px] text-gray-500">{data.navbar.timings}</span>
         </div>
         {/* Mobile Menu Toggle */}

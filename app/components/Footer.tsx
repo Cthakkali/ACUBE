@@ -21,12 +21,12 @@ export default function Footer() {
             {data.footer.cta.description}
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-tertiary hover:bg-[#F57C00] transition-colors text-white font-bold px-4 py-3 rounded-2xl flex items-center gap-2">
-              {data.footer.cta.button1} <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="bg-transparent border border-white hover:bg-white hover:text-tertiary transition-colors text-white font-bold px-4 py-3 rounded-2xl flex items-center gap-2">
-              {data.footer.cta.button2} <Download className="w-4 h-4" />
-            </button>
+            <Link href={data.footer.cta.button1.href} className="bg-tertiary hover:bg-[#F57C00] transition-colors text-white font-bold px-4 py-3 rounded-2xl flex items-center gap-2">
+              {data.footer.cta.button1.label} <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link href={data.footer.cta.button2.href} className="bg-transparent border border-white hover:bg-white hover:text-tertiary transition-colors text-white font-bold px-4 py-3 rounded-2xl flex items-center gap-2">
+              {data.footer.cta.button2.label} <Download className="w-4 h-4" />
+            </Link>
           </div>
         </div>
 
@@ -38,7 +38,7 @@ export default function Footer() {
               <div>
                 <h4 className="font-bold mb-1 text-sm">{data.footer.contact.title}</h4>
                 <div className="text-xs text-white leading-relaxed font-medium flex flex-col gap-1">
-                  {data.footer.contact.phones.map((phone, idx) => (
+                  {data.company.phones.map((phone, idx) => (
                     <a key={idx} href={`tel:${phone.link}`} className="hover:text-primary-1 transition-colors">{phone.display}</a>
                   ))}
                 </div>
@@ -48,7 +48,7 @@ export default function Footer() {
               <Mail className="w-6 h-6 shrink-0 text-white" />
               <div>
                 <h4 className="font-bold mb-1 text-sm">{data.footer.contact.emailTitle}</h4>
-                <a href={`mailto:${data.footer.contact.email}`} className="text-xs text-white hover:underline font-medium">{data.footer.contact.email}</a>
+                <a href={`mailto:${data.company.email}`} className="text-xs text-white hover:underline font-medium">{data.company.email}</a>
               </div>
             </div>
           </div>
@@ -62,19 +62,16 @@ export default function Footer() {
               <h4 className="font-bold mb-1 text-sm">{data.footer.office.title}</h4>
 
               <div>
-                <h5 className="font-bold text-[11px] text-white mb-1">{data.footer.office.registered.title}</h5>
-                <p className="text-[11px] text-white leading-relaxed">
-                  {data.footer.office.registered.addressLine1}<br />
-                  {data.footer.office.registered.addressLine2}<br />
-                  {data.footer.office.registered.addressLine3}
+                <h5 className="font-bold text-[11px] text-white mb-1">{data.company.offices.registered.title}</h5>
+                <p className="text-[11px] text-white leading-relaxed whitespace-pre-line">
+                  {data.company.offices.registered.addressLines.join('\n')}
                 </p>
               </div>
 
               <div>
-                <h5 className="font-bold text-[11px] text-white mb-1">{data.footer.office.head.title}</h5>
-                <p className="text-[11px] text-white leading-relaxed">
-                  {data.footer.office.head.addressLine1}<br />
-                  {data.footer.office.head.addressLine2}
+                <h5 className="font-bold text-[11px] text-white mb-1">{data.company.offices.head.title}</h5>
+                <p className="text-[11px] text-white leading-relaxed whitespace-pre-line">
+                  {data.company.offices.head.addressLines.join('\n')}
                 </p>
               </div>
             </div>
@@ -125,7 +122,7 @@ export default function Footer() {
         <div className="flex flex-col">
           <h4 className="font-bold text-sm mb-5">{data.footer.certifications.title}</h4>
           <ul className="flex flex-col gap-3 text-xs text-white/80 font-medium">
-            {data.footer.certifications.items.map((item, idx) => (
+            {data.company.certifications.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
           </ul>

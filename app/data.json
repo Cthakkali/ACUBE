@@ -3,9 +3,42 @@
     "title": "A-Cube Institute of Skills",
     "description": "Reliable Manpower for Every Industry."
   },
+  "company": {
+    "phones": [
+      { "display": "+91 98947 51538", "link": "+919894751538" },
+      { "display": "0421 6614336", "link": "04216614336" }
+    ],
+    "email": "acubeskills@gmail.com",
+    "offices": {
+      "head": {
+        "title": "Head Office",
+        "address": "No:84, Sai Best Complex, Second Floor, Kuppana Chetty Street, Palladam road, Tiruppur - 641604",
+        "addressLines": [
+          "No:84, Sai Best Complex, Second Floor, Kuppana",
+          "Chetty Street, Palladam road, Tiruppur- 641604"
+        ]
+      },
+      "registered": {
+        "title": "Registered Office",
+        "address": "IInd Floor, Sibi's Nest, 042/14, Near Kannaki Departmental Stores, Perundurai Main Road, Thindal, Erode – 638012",
+        "addressLines": [
+          "IInd Floor, Sibi's Nest, 042/14, Near Kannaki",
+          "Departmental Stores, Perundurai Main Road,",
+          "Thindal, Erode - 638012"
+        ]
+      }
+    },
+    "certifications": [
+      "ISO 9001:2015 Certified",
+      "Certificate of Incorporation",
+      "GST Registration",
+      "MSME Registration",
+      "EPF Registration",
+      "ESIC Registration",
+      "Labour Registration"
+    ]
+  },
   "navbar": {
-    "phone": "+91 9999 999 999",
-    "phoneLink": "+919999999999",
     "timings": "Mon-Sat : 09 00AM - 04 00 PM",
     "links": [
       { "label": "Home", "href": "/" },
@@ -23,8 +56,8 @@
     "titleHighlight": "Industry.",
     "tags": ["Skilled", "Unskilled", "Contract", "Permanent"],
     "description": "A-Cube Institute of Skills helps businesses build dependable teams through skilled, unskilled, contract, and permanent manpower solutions. We connect organizations with qualified professionals who are ready to contribute from day one, ensuring operational continuity and business growth.",
-    "button1": "Explore Services",
-    "button2": "Contact Us",
+    "button1": { "label": "Explore Services", "href": "/#services" },
+    "button2": { "label": "Contact Us", "href": "/contact" },
     "stats": [
       { "number": "2000+", "label1": "Candidates Trained", "label2": "" },
       { "number": "5 Years+", "label1": "Experience", "label2": "" },
@@ -138,31 +171,15 @@
     "cta": {
       "title": "Need Reliable Manpower for your Business ?",
       "description": "Partner with A-Cube Institute of Skills for reliable manpower, recruitment, HR consulting, and industry-focused skill development programs.",
-      "button1": "Get in touch",
-      "button2": "Download Profile"
+      "button1": { "label": "Get in touch", "href": "/contact" },
+      "button2": { "label": "Download Profile", "href": "/profile.pdf" }
     },
     "contact": {
       "title": "Contact Us",
-      "phones": [
-        { "display": "91 9894 751 538", "link": "+919894751538" },
-        { "display": "0421 661 4336", "link": "04216614336" }
-      ],
-      "emailTitle": "Enquiry",
-      "email": "acubeskills@gmail.com"
+      "emailTitle": "Enquiry"
     },
     "office": {
-      "title": "Office Location",
-      "registered": {
-        "title": "Registered Office",
-        "addressLine1": "IInd Floor, Sibi's Nest, 042/14, Near Kannaki",
-        "addressLine2": "Departmental Stores, Perundurai Main Road,",
-        "addressLine3": "Thindal, Erode - 638012"
-      },
-      "head": {
-        "title": "Head office",
-        "addressLine1": "No:84, Sai Best Complex, Second Floor, Kuppana",
-        "addressLine2": "Chetty Street, Palladam road, Tiruppur- 641604"
-      }
+      "title": "Office Location"
     },
     "companyInfo": "A-Cube Institute of Skills is a leading human resource supply and skill development solutions provider committed to empowering individuals and supporting organization.",
     "quickLinks": {
@@ -185,15 +202,7 @@
       ]
     },
     "certifications": {
-      "title": "Certifications",
-      "items": [
-        "ISO 9001:2015 certified",
-        "Certificate of Incorporation",
-        "GST Registeration",
-        "MSME Registeration",
-        "EPF & ESIC Registeration",
-        "Labour Registeration"
-      ]
+      "title": "Certifications"
     },
     "bottomBar": {
       "copyright": "© 2026 A-Cube Institute of Skills | Developed by",
@@ -243,16 +252,7 @@
       "badge": "Trust & Compliance",
       "title": "Certifications & ",
       "titleHighlight": "Registrations",
-      "description": "We maintain all statutory and operational compliances required for effective, reliable service delivery.",
-      "certifications": [
-        "ISO 9001:2015 Certified",
-        "Certificate of Incorporation",
-        "GST Registration",
-        "MSME Registration",
-        "EPF Registration",
-        "ESIC Registration",
-        "Labour Registration"
-      ]
+      "description": "We maintain all statutory and operational compliances required for effective, reliable service delivery."
     }
   },
   "contact": {
@@ -263,21 +263,8 @@
       "description": "Whether you need skilled manpower, corporate training, or HR consulting, our team is ready to help your business grow."
     },
     "info": {
-      "headOffice": {
-        "title": "Head Office",
-        "address": "No:84, Sai Best Complex, Second Floor, Kuppana Chetty Street, Palladam road, Tiruppur - 641604"
-      },
-      "registeredOffice": {
-        "title": "Registered Office",
-        "address": "IInd Floor, Sibi's Nest, 042/14, Near Kannaki Departmental Stores, Perundurai Main Road, Thindal, Erode – 638012"
-      },
       "directContact": {
-        "title": "Direct Contact",
-        "phones": [
-          { "display": "+91 98947 51538", "link": "+919894751538" },
-          { "display": "0421 6614336", "link": "04216614336" }
-        ],
-        "email": "acubeskills@gmail.com"
+        "title": "Direct Contact"
       }
     },
     "form": {
